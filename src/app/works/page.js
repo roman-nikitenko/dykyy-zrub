@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const Works = () => {
+const Works = () => {
   return (
     <div className="Page">
 
     </div>
   );
 };
+
+export default Works

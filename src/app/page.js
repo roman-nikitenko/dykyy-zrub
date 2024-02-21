@@ -1,9 +1,11 @@
 import Image from "next/image";
 
-export default function Home() {
+function Home() {
   return (
     <main className="">
-      <h1>Hello</h1>
+      <h1>home page</h1>
     </main>
   );
 }
+
+export default Home
