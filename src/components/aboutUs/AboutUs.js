@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const Banner = () => {
+const AboutUs = () => {
   return (
     <article className='flex'>
       <div className='grid grid-rows-2 grid-flow-col gap-4'>
@@ -36,4 +36,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default AboutUs;

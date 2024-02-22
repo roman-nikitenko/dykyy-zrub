@@ -1,11 +1,12 @@
-import Image from "next/image";
+import Banner from "@/components/baner/Banner";
 
 function Home() {
   return (
     <main className="">
-      <h1>home page</h1>
+      <div className='h-[80px] bg-[#132a13]'></div>
+      <Banner />
     </main>
   );
 }
 
-export default Home
+export default Home;
