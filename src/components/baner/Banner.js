@@ -26,8 +26,8 @@ const Banner = () => {
           Будинки з дикого зрубу
         </h1>
         <p className='pb-[25px] text-[15px] text-white lg:text-[20px] xl:pb-[35px] xl:text-[25px]'>
-          Екологічно чиста високогірна смерека Закарпаття. Ручна
-          робота від виробника без посередників!
+          Екологічно чиста високогірна смерека Закарпаття. Ручна робота від виробника без
+          посередників!
         </p>
         <button className='rounded-[8px] border border-Yellow-500 bg-Yellow-500 px-[15px] py-[6px] text-[12px] font-bold tracking-wide text-white hover:border-Brown-500 hover:bg-Brown-500 lg:px-[24px] lg:py-[8px] lg:text-[15px] xl:px-[35px] xl:py-[11px] xl:text-[18px]'>
           Розрахувати

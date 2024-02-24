@@ -28,16 +28,9 @@ const OurAdvantages = () => {
           className='grid h-[180px] w-[260px] content-center justify-items-center gap-[15px]'
         >
           <div className='h-[50px] w-[50px] bg-Green-300'>
-            <Image
-              src={advantage.iconSrc}
-              alt='icon'
-              width={50}
-              height={50}
-            />
+            <Image src={advantage.iconSrc} alt='icon' width={50} height={50} />
           </div>
-          <span className='text-center text-[16px] text-Green-300'>
-            {advantage.text}
-          </span>
+          <span className='text-center text-[16px] text-Green-300'>{advantage.text}</span>
         </div>
       ))}
     </section>
