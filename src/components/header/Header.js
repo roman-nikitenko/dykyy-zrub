@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import Link from 'next/link';
 
 export const Header = () => {
   return (
@@ -32,10 +33,10 @@ export const Header = () => {
       </div>
       <nav className="px-[160px]">
         <ul className="text-white flex gap-[54px] w-[1280px]">
-          <li className="py-4 cursor-pointer hover:scale-[1.1] transition hover:text-Yellow-500">Головна</li>
-          <li className="py-4 cursor-pointer hover:scale-[1.1] transition hover:text-Yellow-500">Наші роботи</li>
-          <li className="py-4 cursor-pointer hover:scale-[1.1] transition hover:text-Yellow-500">Ціни</li>
-          <li className="py-4 cursor-pointer hover:scale-[1.1] transition hover:text-Yellow-500">Контакти</li>
+          <Link href={'/'}><li className="py-4 cursor-pointer hover:scale-[1.1] transition hover:text-Yellow-500">Головна</li></Link>
+          <Link href={'/works'}><li className="py-4 cursor-pointer hover:scale-[1.1] transition hover:text-Yellow-500">Наші роботи</li></Link>
+          <Link href={'/prices'}><li className="py-4 cursor-pointer hover:scale-[1.1] transition hover:text-Yellow-500">Ціни</li></Link>
+          <Link href={'/contacts'}><li className="py-4 cursor-pointer hover:scale-[1.1] transition hover:text-Yellow-500">Контакти</li></Link>
         </ul>
       </nav>
     </header>
