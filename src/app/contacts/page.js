@@ -1,9 +1,9 @@
 const HomePage = () => {
   return (
-    <div className="bg-amber-200">
-      <h1>Contacts pahe </h1>
+    <div className='bg-amber-200'>
+      <h1>Contacts page</h1>
     </div>
   );
 };
 
-export default HomePage
+export default HomePage;

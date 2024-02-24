@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const Banner = () => {
   return (
-    <section className=''>
+    <section className='relative w-full'>
       <Image
         src='/images/banner.jpg'
-        alt='house image'
+        alt='banner'
         width={1000}
         height={1000}
         className='w-[100vw]'
@@ -21,17 +21,15 @@ const Banner = () => {
       {/*    Розрахувати*/}
       {/*  </button>*/}
       {/*</article>*/}
-      <article
-        className='absolute sm:top-[130px] sm:left-[100px] lg:top-[160px] lg:left-[170px] w-[380px] lg:w-[400px] xl:w-[480px]'>
-        <h1
-          className='pb-[10px] xl:pb-[17px] text-[27px] lg:text-[33px] xl:text-[40px] text-Yellow-500 font-bold'>
+      <article className='absolute left-[20px] top-[20px] w-[380px] sm:left-[100px] sm:top-[30px] lg:left-[170px] lg:top-[60px] lg:w-[400px] xl:w-[480px]'>
+        <h1 className='pb-[10px] text-[27px] font-bold text-Yellow-500 lg:text-[33px] xl:pb-[17px] xl:text-[40px]'>
           Будинки з дикого зрубу
         </h1>
-        <p className='pb-[25px] xl:pb-[35px] text-[15px] lg:text-[20px] xl:text-[25px] text-white'>
-          Екологічно чиста високогірна смерека Закарпаття. Ручна робота від виробника без посередників!
+        <p className='pb-[25px] text-[15px] text-white lg:text-[20px] xl:pb-[35px] xl:text-[25px]'>
+          Екологічно чиста високогірна смерека Закарпаття. Ручна робота від виробника без
+          посередників!
         </p>
-        <button
-          className='px-[15px] py-[6px] lg:px-[24px] lg:py-[8px] xl:px-[35px] xl:py-[11px] border border-Yellow-500 bg-Yellow-500 rounded-[8px] text-white tracking-wide font-bold text-[12px] lg:text-[15px] xl:text-[18px] hover:bg-Brown-500 hover:border-Brown-500'>
+        <button className='rounded-[8px] border border-Yellow-500 bg-Yellow-500 px-[15px] py-[6px] text-[12px] font-bold tracking-wide text-white hover:border-Brown-500 hover:bg-Brown-500 lg:px-[24px] lg:py-[8px] lg:text-[15px] xl:px-[35px] xl:py-[11px] xl:text-[18px]'>
           Розрахувати
         </button>
       </article>

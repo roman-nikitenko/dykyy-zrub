@@ -1,11 +1,5 @@
-import React from 'react';
-
 const Works = () => {
-  return (
-    <div className="Page">
-
-    </div>
-  );
+  return <div className='Page'>Our works</div>;
 };
 
-export default Works
+export default Works;
