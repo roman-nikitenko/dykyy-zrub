@@ -39,13 +39,13 @@
 }
 
 .navigation_hover {
-  @apply py-4 cursor-pointer hover:scale-[1.1] transition hover:text-Yellow-500
+  @apply cursor-pointer py-4 transition hover:scale-[1.1] hover:text-Yellow-500;
 }
 
 .isActive {
-  @apply text-Yellow-500
+  @apply text-Yellow-500;
 }
 
 .decorationLine {
-  @apply before:block before:absolute before:-inset-1 before:border-t-[6px] before:top-[-11px] before:w-[150px] before:border-Green-700 relative inline-block
+  @apply relative inline-block before:absolute before:-inset-1 before:top-[-11px] before:block before:w-[150px] before:border-t-[6px] before:border-Green-700;
 }
