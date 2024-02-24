@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const Banner = () => {
   return (
-    <section className=''>
+    <section className='relative w-full'>
       <Image
         src='/images/banner.jpg'
-        alt='house image'
+        alt='banner'
         width={1000}
         height={1000}
         className='w-[100vw]'
@@ -22,7 +22,7 @@ const Banner = () => {
       {/*  </button>*/}
       {/*</article>*/}
       <article
-        className='absolute sm:top-[130px] sm:left-[100px] lg:top-[160px] lg:left-[170px] w-[380px] lg:w-[400px] xl:w-[480px]'>
+        className='absolute top-[20px] left-[20px] sm:top-[30px] sm:left-[100px] lg:top-[60px] lg:left-[170px] w-[380px] lg:w-[400px] xl:w-[480px]'>
         <h1
           className='pb-[10px] xl:pb-[17px] text-[27px] lg:text-[33px] xl:text-[40px] text-Yellow-500 font-bold'>
           Будинки з дикого зрубу
