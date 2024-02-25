@@ -1,15 +1,11 @@
 import Image from 'next/image';
+import BannerImg from '@/public/images/banner.jpg';
+import { Modal } from '@/components/modal/Modal';
 
 const Banner = () => {
   return (
     <section className='relative w-full'>
-      <Image
-        src='/images/banner.jpg'
-        alt='banner'
-        width={1000}
-        height={1000}
-        className='w-[100vw]'
-      />
+      <Image src={BannerImg} alt='banner' className='w-[100vw]' quality={100} />
       {/*<article className='p-[5px] grid'>*/}
       {/*  <h1 className='text-[31px] text-Yellow-500 font-bold'>*/}
       {/*    Будинки з дикого зрубу</h1>*/}
@@ -29,9 +25,9 @@ const Banner = () => {
           Екологічно чиста високогірна смерека Закарпаття. Ручна робота від виробника без
           посередників!
         </p>
-        <button className='rounded-[8px] border border-Yellow-500 bg-Yellow-500 px-[15px] py-[6px] text-[12px] font-bold tracking-wide text-white hover:border-Brown-500 hover:bg-Brown-500 lg:px-[24px] lg:py-[8px] lg:text-[15px] xl:px-[35px] xl:py-[11px] xl:text-[18px]'>
-          Розрахувати
-        </button>
+        <Modal title={'Напишіть нам і ми відповімо'}>
+          <h1>Hello there</h1>
+        </Modal>
       </article>
     </section>
   );
