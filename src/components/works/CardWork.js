@@ -18,7 +18,7 @@ const CardWork = ({ build }) => {
           className='rounded-3xl shadow-2xl shadow-black'
           src={image}
           alt={title}
-          fill={true}
+          fill
           objectFit='cover'
         />
       </div>
