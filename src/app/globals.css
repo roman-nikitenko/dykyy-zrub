@@ -2,5 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -0.01em;
+  }
+  h2 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 0;
+  }
+  h3 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0;
+  }
+  p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0;
+  }
+}
+
+.small-text {
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0;
+}
+
+.navigation_hover {
+  @apply cursor-pointer py-4 transition hover:scale-[1.1] hover:text-Yellow-500;
+}
+
+.isActive {
+  @apply text-Yellow-500;
+}
+
+.decorationLine {
+  @apply relative inline-block before:absolute before:-inset-1 before:top-[-11px] before:block before:w-[150px] before:border-t-[6px] before:border-Green-700;
 }

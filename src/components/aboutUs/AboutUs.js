@@ -26,9 +26,9 @@ const AboutUs = () => {
           className=' rounded-[35px]'
         />
       </div>
-      <article className='md:max-w-[400px] lg:max-w-[450px] xl:max-w-[570px]'>
-        <hr className='w-[140px] border-t-[5px] border-Green-700 xl:border-t-[6px]' />
-        <h2 className='mb-[10px] text-[30px] font-bold text-Green-700 lg:text-[35px] xl:text-[42px]'>
+      <article className='md:max-w-[400px] lg:max-w-[450px] xl:max-w-[570px] '>
+        {/*<hr className='w-[140px] border-t-[5px] border-Green-700 xl:border-t-[6px]' />*/}
+        <h2 className='decorationLine mb-[10px] text-[30px] font-bold text-Green-700 lg:text-[35px] xl:text-[42px] '>
           Про нас
         </h2>
         <p className='mb-[10px] text-[17px] text-Green-700'>
