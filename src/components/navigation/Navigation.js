@@ -14,7 +14,7 @@ const Navigation = () => {
 
   return (
     <nav>
-      <ul className='flex gap-[54px] text-white'>
+      <ul className='flex justify-between text-white sm:gap-[54px]'>
         {navLinks.map((link) => {
           const isActive = pathName === link.href;
           return (

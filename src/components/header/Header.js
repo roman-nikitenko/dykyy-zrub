@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Navigation from '@/components/navigation/Navigation';
 
-export const Header = () => {
+const Header = () => {
   return (
     <header className='flex items-center justify-between bg-Green-700 px-40'>
       <Navigation />
@@ -13,3 +13,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;
