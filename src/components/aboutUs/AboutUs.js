@@ -4,30 +4,35 @@ const AboutUs = () => {
   return (
     <section className='flex justify-center gap-[20px] p-[5px] lg:gap-[40px] xl:px-[150px]'>
       <div className='hidden sm:grid sm:items-center md:gap-[10px] lg:grid-flow-col lg:grid-rows-2 lg:gap-[16px]'>
-        <Image
-          src='/images/house2.jpeg'
-          alt='house image'
-          width={255}
-          height={237}
-          className='lg:lace-content-center rounded-[35px] md:hidden lg:row-span-2 lg:block'
-        />
-        <Image
-          src='/images/house1.jpeg'
-          alt='house image'
-          width={300}
-          height={200}
-          className='rounded-[35px]'
-        />
-        <Image
-          src='/images/interior1.jpeg'
-          alt='interior image'
-          width={300}
-          height={214}
-          className=' rounded-[35px]'
-        />
+        <div className='w-[255px] overflow-hidden rounded-[35px] md:hidden lg:row-span-2 lg:block lg:place-content-center'>
+          <Image
+            src='/images/house2.jpeg'
+            alt='house image'
+            width={255}
+            height={237}
+            className='transition duration-300 hover:scale-[1.1]'
+          />
+        </div>
+        <div className='w-[300px] overflow-hidden rounded-[35px]'>
+          <Image
+            src='/images/house1.jpeg'
+            alt='house image'
+            width={300}
+            height={200}
+            className='transition duration-300 hover:scale-[1.1]'
+          />
+        </div>
+        <div className='w-[300px] overflow-hidden rounded-[35px]'>
+          <Image
+            src='/images/interior1.jpeg'
+            alt='interior image'
+            width={300}
+            height={214}
+            className='transition duration-300 hover:scale-[1.1]'
+          />
+        </div>
       </div>
       <article className='md:max-w-[400px] lg:max-w-[450px] xl:max-w-[570px] '>
-        {/*<hr className='w-[140px] border-t-[5px] border-Green-700 xl:border-t-[6px]' />*/}
         <h2 className='decorationLine mb-[10px] text-[30px] font-bold text-Green-700 lg:text-[35px] xl:text-[42px] '>
           Про нас
         </h2>
