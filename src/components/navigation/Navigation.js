@@ -13,8 +13,8 @@ const Navigation = () => {
   ];
 
   return (
-    <nav className='hidden md:block'>
-      <ul className='flex items-center text-white md:gap-10 lg:gap-12'>
+    <nav>
+      <ul className='flex items-center justify-evenly text-white md:gap-10 lg:gap-12'>
         {navLinks.map((link) => {
           const isActive = pathName === link.href;
           return (

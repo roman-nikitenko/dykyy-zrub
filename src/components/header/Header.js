@@ -3,12 +3,14 @@ import Image from 'next/image';
 import Navigation from '@/components/navigation/Navigation';
 import Logo from '@/components/logo/Logo';
 
-export const Header = () => {
+const Header = () => {
   return (
     <header className='flex items-center justify-between bg-Green-700 px-5 lg:px-12 2xl:px-40'>
       <div className='flex items-center md:gap-7 lg:gap-10'>
         <Logo />
-        <Navigation />
+        <div className='hidden md:block'>
+          <Navigation />
+        </div>
         <button className='hidden rounded-[8px] border border-Yellow-500 bg-Yellow-500 px-3 py-1 text-[12px] font-bold tracking-wide text-white transition hover:border-Brown-500 hover:bg-Brown-500 md:block lg:ml-10 lg:text-[15px] xl:text-[18px]'>
           <span className='hidden lg:block'>Задати питання</span>
           <div className='relative size-7 lg:hidden'>
@@ -26,3 +28,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;
