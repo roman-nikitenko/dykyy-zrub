@@ -4,13 +4,12 @@ import Image from 'next/image';
 import Navigation from '@/components/navigation/Navigation';
 import Logo from '@/components/logo/Logo';
 
-export const Header = () => {
-  const [isOpen, setIsOpen] = useState();
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
   const openMenuHandler = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  console.log(isOpen);
   return (
     <header className='relative flex items-center justify-between bg-Green-700 px-5 lg:px-12 2xl:px-40'>
       <div className='flex items-center overflow-hidden md:gap-7 lg:gap-5'>
@@ -46,3 +45,5 @@ export const Header = () => {
     </header>
   );
 };
+
+export default Header;
