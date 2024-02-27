@@ -21,11 +21,11 @@ const advantages = [
 
 const OurAdvantages = () => {
   return (
-    <section className='flex h-[400px] items-center justify-center gap-[40px] bg-Green-600'>
+    <section className='grid h-auto min-h-[350px] justify-items-center bg-Green-600 py-[15px] sm:grid-cols-2 lg:flex lg:items-center lg:justify-center xl:gap-[40px]'>
       {advantages.map((advantage, idx) => (
         <div
           key={idx}
-          className='grid h-[180px] w-[260px] content-center justify-items-center gap-[15px]'
+          className='grid h-[180px] max-w-[260px] content-center justify-items-center gap-[15px] lg:w-[250px] xl:w-[260px]'
         >
           <div className='h-[50px] w-[50px] bg-Green-300'>
             <Image src={advantage.iconSrc} alt='icon' width={50} height={50} />
