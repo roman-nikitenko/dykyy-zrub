@@ -1,39 +1,107 @@
 import Image from 'next/image';
 
-const advantages = [
-  {
-    iconSrc: '',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  },
-  {
-    iconSrc: '',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  },
-  {
-    iconSrc: '',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  },
-  {
-    iconSrc: '',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-  },
-];
-
 const OurAdvantages = () => {
   return (
-    <section className='grid h-auto min-h-[350px] justify-items-center bg-Green-600 py-[15px] sm:grid-cols-2 lg:flex lg:items-center lg:justify-center xl:gap-[40px]'>
-      {advantages.map((advantage, idx) => (
-        <div
-          key={idx}
-          className='grid h-[180px] max-w-[260px] content-center justify-items-center gap-[15px] lg:w-[250px] xl:w-[260px]'
-        >
-          <div className='h-[50px] w-[50px] bg-Green-300'>
-            <Image src={advantage.iconSrc} alt='icon' width={50} height={50} />
+    <>
+      <section className='grid grid-cols-1 gap-5 md:grid-cols-3'>
+        <div className='border  border-gray-200 p-7'>
+          <div className='block-advantage group transition duration-700'>
+            <Image src='/advatageImages/planning.svg' alt='planning' width={70} height={70} />
+            <h2 className='transition duration-300 group-hover:text-Yellow-500'>
+              Project Planning
+            </h2>
+            <p className='text-gray-400'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore
+              est illum iusto, laboriosam provident quasi quod sed sunt.
+            </p>
+            <div className=''>
+              <button className='font-bold transition duration-300 group-hover:text-Yellow-500'>
+                Learn more
+              </button>
+            </div>
           </div>
-          <span className='text-center text-[16px] text-Green-300'>{advantage.text}</span>
         </div>
-      ))}
-    </section>
+        <div className='border border-gray-200 p-7 md:translate-y-[60px]'>
+          <div className='block-advantage group transition duration-700'>
+            <Image src='/advatageImages/management.svg' alt='planning' width={70} height={70} />
+            <h2 className='transition duration-300 group-hover:text-Yellow-500'>
+              Project Management
+            </h2>
+            <p className='text-gray-400'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore
+              est illum iusto, laboriosam provident quasi quod sed sunt.
+            </p>
+            <div className=''>
+              <button className='font-bold transition duration-300 group-hover:text-Yellow-500'>
+                Learn more
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className='border border-gray-200 p-7 md:translate-y-[120px]'>
+          <div className='block-advantage group transition duration-700'>
+            <Image src='/advatageImages/building.svg' alt='planning' width={70} height={70} />
+            <h2 className='transition duration-300 group-hover:text-Yellow-500'>
+              General Contracting
+            </h2>
+            <p className='text-gray-400'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore
+              est illum iusto, laboriosam provident quasi quod sed sunt.
+            </p>
+            <div className=''>
+              <button className='font-bold transition duration-300 group-hover:text-Yellow-500'>
+                Learn more
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className='border border-gray-200 p-7'>
+          <div className='block-advantage group transition duration-700'>
+            <Image src='/advatageImages/design.svg' alt='planning' width={70} height={70} />
+            <h2 className='transition duration-300 group-hover:text-Yellow-500'>Interior Design</h2>
+            <p className='text-gray-400'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore
+              est illum iusto, laboriosam provident quasi quod sed sunt.
+            </p>
+            <div className=''>
+              <button className='font-bold transition duration-300 group-hover:text-Yellow-500'>
+                Learn more
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className='border border-gray-200 p-7 md:translate-y-[60px]'>
+          <div className='block-advantage group transition duration-700'>
+            <Image src='/advatageImages/design-tool.svg' alt='planning' width={70} height={70} />
+            <h2 className='transition duration-300 group-hover:text-Yellow-500'>Exterior Design</h2>
+            <p className='text-gray-400'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore
+              est illum iusto, laboriosam provident quasi quod sed sunt.
+            </p>
+            <div className=''>
+              <button className='font-bold transition duration-300 group-hover:text-Yellow-500'>
+                Learn more
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className='border border-gray-200 p-7 md:translate-y-[120px]'>
+          <div className='block-advantage group transition duration-700'>
+            <Image src='/advatageImages/planning2.svg' alt='planning' width={70} height={70} />
+            <h2 className='transition duration-300 group-hover:text-Yellow-500'>Space Planning</h2>
+            <p className='text-gray-400'>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore
+              est illum iusto, laboriosam provident quasi quod sed sunt.
+            </p>
+            <div className=''>
+              <button className='font-bold transition duration-300 group-hover:text-Yellow-500'>
+                Learn more
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
