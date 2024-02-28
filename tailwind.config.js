@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+import withMT from '@material-tailwind/react/utils/withMT';
+
+module.exports = withMT({
+  content: ['./src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     extend: {
       colors: {
@@ -14,9 +13,9 @@ module.exports = {
         'Green-300': '#ECF3E9',
         'Green-light': '#6D9773',
         'Yellow-500': '#FFBA00',
-        'Brown-500': '#BB8A52'
-      }
+        'Brown-500': '#BB8A52',
+      },
     },
   },
   plugins: [],
-};
+});

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --swiper-navigation-color: #31572C;
+  --swiper-navigation-size: 30px!important;
+}
+
 @layer base {
   html {
     @apply scroll-smooth;
@@ -36,6 +41,42 @@
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 0;
+}
+
+.swiper {
+  margin-right: 0 !important;
+  margin-left: 3px !important;
+}
+
+.swiper-wrapper {
+  min-height: 420px;
+  align-items: center;
+}
+
+.swiper:hover .swiper-button-prev, .swiper:hover .swiper-button-next {
+  display: block !important;
+}
+
+.swiper-button-prev {
+  margin-left: -10px;
+  display: none !important;
+}
+
+.swiper-button-prev::after {
+  height: 30px!important;
+}
+
+.swiper-button-next {
+  margin-right: -5px;
+  display: none !important;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  color: #4F772D;
+}
+
+.swiper-button-next:active, .swiper-button-prev:active {
+  color: #90A955;
 }
 
 .navigation_hover {
