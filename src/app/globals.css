@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --swiper-navigation-color: #31572C;
-  --swiper-navigation-size: 30px!important;
+  --swiper-navigation-color: #31572c;
+  --swiper-navigation-size: 30px !important;
 }
 
 @layer base {
@@ -53,7 +53,8 @@
   align-items: center;
 }
 
-.swiper:hover .swiper-button-prev, .swiper:hover .swiper-button-next {
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
   display: block !important;
 }
 
@@ -63,7 +64,7 @@
 }
 
 .swiper-button-prev::after {
-  height: 30px!important;
+  height: 30px !important;
 }
 
 .swiper-button-next {
@@ -71,12 +72,14 @@
   display: none !important;
 }
 
-.swiper-button-next:hover, .swiper-button-prev:hover {
-  color: #4F772D;
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #4f772d;
 }
 
-.swiper-button-next:active, .swiper-button-prev:active {
-  color: #90A955;
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  color: #90a955;
 }
 
 .navigation_hover {
