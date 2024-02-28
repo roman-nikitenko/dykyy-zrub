@@ -47,5 +47,5 @@
 }
 
 .decorationLine {
-  @apply relative inline-block before:absolute before:-inset-1 before:top-[-11px] before:block before:w-[150px] before:border-t-[6px] before:border-Green-700;
+  @apply relative inline-block before:absolute before:-inset-1 before:left-[2px] before:top-[-11px] before:block before:w-[150px] before:border-t-[6px] before:border-Green-700;
 }
