@@ -53,7 +53,7 @@ const ConstructionStages = () => {
   ];
   return (
     <>
-      <section className='grid grid-cols-1 gap-5 md:grid-cols-3'>
+      <section className='grid grid-cols-1 gap-5 pb-20 md:grid-cols-3'>
         {listOfStages.map((stage) => {
           const { title, imageUrl, description, styles, id } = stage;
 
