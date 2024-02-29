@@ -1,6 +1,6 @@
 import Banner from '@/components/banner/Banner';
 import AboutUs from '@/components/aboutUs/AboutUs';
-import OurAdvantages from '@/components/ourAdvantages/OurAdvantages';
+import ConstructionStages from '@/components/constructionStages/ConstructionStages';
 
 const Home = () => {
   return (
@@ -8,7 +8,7 @@ const Home = () => {
       <Banner />
       <div className='xl:px-18 px-5 lg:px-12 2xl:px-40'>
         <AboutUs />
-        <OurAdvantages />
+        <ConstructionStages />
       </div>
     </main>
   );
