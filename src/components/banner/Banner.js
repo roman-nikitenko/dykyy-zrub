@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const Banner = () => {
   return (
-    <section className='relative w-full'>
+    <section className='relative w-full shadow-2xl'>
       <Image
         src='/images/banner.jpg'
         alt='banner'

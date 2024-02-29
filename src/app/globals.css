@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --swiper-navigation-color: #31572c;
+  --swiper-navigation-size: 30px !important;
+}
+
 @layer base {
   html {
     @apply scroll-smooth;
@@ -38,6 +43,45 @@
   letter-spacing: 0;
 }
 
+.swiper {
+  margin-right: 0 !important;
+  margin-left: 3px !important;
+}
+
+.swiper-wrapper {
+  min-height: 420px;
+  align-items: center;
+}
+
+.swiper:hover .swiper-button-prev,
+.swiper:hover .swiper-button-next {
+  display: block !important;
+}
+
+.swiper-button-prev {
+  margin-left: -10px;
+  display: none !important;
+}
+
+.swiper-button-prev::after {
+  height: 30px !important;
+}
+
+.swiper-button-next {
+  margin-right: -5px;
+  display: none !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #4f772d;
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  color: #90a955;
+}
+
 .navigation_hover {
   @apply cursor-pointer py-4 transition hover:scale-[1.1] hover:text-Yellow-500;
 }
@@ -47,7 +91,7 @@
 }
 
 .decorationLine {
-  @apply relative inline-block before:absolute before:-inset-1 before:top-[-11px] before:block before:w-[150px] before:border-t-[6px] before:border-Green-700;
+  @apply relative inline-block before:absolute before:-inset-1 before:left-[2px] before:top-[-11px] before:block before:w-[150px] before:border-t-[6px] before:border-Green-700;
 }
 
 .input-field {
