@@ -15,7 +15,7 @@ const Navigation = ({ hidden, setIsOpen }) => {
 
   return (
     <nav className={`${hidden && 'hidden'} lg:block`}>
-      <ul className='flex flex-col items-center text-white sm:flex-row md:gap-10 lg:gap-12'>
+      <ul className='flex flex-col items-center text-white md:gap-10 lg:flex-row lg:gap-12'>
         {navLinks.map((link) => {
           const isActive = pathName === link.href;
           return (
