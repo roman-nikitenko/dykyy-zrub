@@ -55,7 +55,7 @@
 }
 
 .block-contacts {
-  @apply w-full lg:w-[350px] h-52 flex flex-col items-center shadow-lg shadow-gray-300 p-5 gap-5 transition duration-500 hover:shadow-none hover:text-white hover:bg-black;
+  @apply flex h-52 w-full flex-col items-center gap-5 p-5 shadow-lg shadow-gray-300 transition duration-500 hover:bg-black hover:text-white hover:shadow-none lg:w-[350px];
 }
 
 .block-advantage {
