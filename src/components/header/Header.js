@@ -32,10 +32,11 @@ const Header = () => {
         />
         <p className='navigation_hover text-base text-white lg:text-lg'>+38 (097) 340 84 34</p>
       </div>
-      <div className='relative size-7 md:hidden' onClick={openMenuHandler}>
+
+      <div className='relative size-7 lg:hidden' onClick={openMenuHandler}>
         <Image src='/icons/burger-white.svg' fill alt='Burger icon' />
       </div>
-      <div id='menu' className={`absolute left-0 right-0 top-[56px] z-10 overflow-hidden`}>
+      <div id='menu' className='absolute left-0 right-0 top-[56px] z-10 overflow-hidden'>
         <div
           className={`bg-Green-700 px-5 py-10 transition-transform duration-500 ${isOpen ? 'translate-x-[0]' : 'translate-x-[100%]'} `}
         >
