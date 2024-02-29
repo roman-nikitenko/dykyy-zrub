@@ -49,3 +49,15 @@
 .decorationLine {
   @apply relative inline-block before:absolute before:-inset-1 before:top-[-11px] before:block before:w-[150px] before:border-t-[6px] before:border-Green-700;
 }
+
+.input-field {
+  @apply border border-Green-light p-3;
+}
+
+.block-contacts {
+  @apply w-full lg:w-[350px] h-52 flex flex-col items-center shadow-lg shadow-gray-300 p-5 gap-5 transition duration-500 hover:shadow-none hover:text-white hover:bg-black;
+}
+
+.block-advantage {
+  @apply flex cursor-pointer flex-col gap-5 transition-all duration-300 hover:-translate-y-3;
+}
