@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const AboutUs = () => {
   return (
-    <section className='flex justify-center gap-[20px] p-[5px] lg:gap-[40px] xl:px-[150px]'>
+    <section className='mb-10 flex justify-center gap-[20px] p-[5px] lg:gap-[40px] xl:px-[150px]'>
       <div className='hidden sm:grid sm:items-center md:gap-[10px] lg:grid-flow-col lg:grid-rows-2 lg:gap-[16px]'>
         <div className='w-[255px] overflow-hidden rounded-[35px] shadow-2xl md:hidden lg:row-span-2 lg:block lg:place-content-center'>
           <Image
