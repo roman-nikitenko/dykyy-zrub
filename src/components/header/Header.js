@@ -32,6 +32,7 @@ const Header = () => {
         />
         <p className='navigation_hover text-base text-white lg:text-lg'>+38 (097) 340 84 34</p>
       </div>
+
       <div className='relative size-7 lg:hidden' onClick={openMenuHandler}>
         <Image src='/icons/burger-white.svg' fill alt='Burger icon' />
       </div>
