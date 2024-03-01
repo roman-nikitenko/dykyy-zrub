@@ -2,9 +2,9 @@ import Image from 'next/image';
 
 const HomePage = () => {
   return (
-    <div className='xl:px-18 px-5 lg:px-12 2xl:px-40'>
+    <div className='container-spaces pb-40'>
       <h1 className='decorationLine my-16'>Контакти</h1>
-      <div className='mb-10 grid grid-cols-1 justify-center gap-5 md:grid-cols-3 lg:flex'>
+      <div className='mb-10 grid grid-cols-1 justify-center gap-5 md:grid-cols-3 lg:flex xl:justify-between'>
         <div className='block-contacts'>
           <Image src='/icons/market-map.svg' alt='map point icon' width={40} height={40} />
           <h3>Location</h3>
@@ -27,7 +27,7 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className='flex-row-reverse xl:flex xl:px-28'>
+      <div className='flex-row-reverse xl:flex'>
         <form className='mb-10 flex flex-col gap-3 lg:px-12 lg:py-20 lg:shadow-xl lg:shadow-gray-300'>
           <input type='text' placeholder='Name' alt='name field' className='input-field' />
           <div className='flex flex-col gap-3 md:flex-row'>
