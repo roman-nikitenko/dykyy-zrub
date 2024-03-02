@@ -39,10 +39,6 @@ const Reviews = () => {
           navigation
           pagination={{ clickable: true }}
           keyboard={{ enabled: true }}
-          autoplay={{
-            delay: 5500,
-            disableOnInteraction: false,
-          }}
           loop={true}
           className='w-[380px] sm:w-[640px] md:w-[750px] lg:w-[1000px] xl:w-[1300px]'
         >
