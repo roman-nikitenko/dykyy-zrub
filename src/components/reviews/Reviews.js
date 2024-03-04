@@ -28,12 +28,13 @@ const breakpoints = {
 const Reviews = () => {
   return (
     <section className='m-auto max-w-[1440px]'>
-      <h2 className='decorationLine mb-[5px] text-[30px] font-bold text-Green-700 sm:mb-[20px] lg:mb-[25px] lg:text-[35px] xl:mb-[40px] xl:text-[42px]'>
+      <h2 className='decorationLine mb:my-[64px] mb-[30px] text-[30px] font-bold text-Green-700 sm:mb-[20px] lg:mb-[25px] lg:text-[35px] xl:mb-[40px] xl:text-[42px]'>
         Відгуки наших клієнтів
       </h2>
       <div className='flex justify-center'>
         <Swiper
           slidesPerView={1}
+          spaceBetween={10}
           breakpoints={breakpoints}
           modules={[Autoplay, Navigation, Keyboard, Pagination]}
           navigation

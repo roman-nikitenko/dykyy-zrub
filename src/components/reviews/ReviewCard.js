@@ -15,7 +15,7 @@ const ReviewCard = ({ review }) => {
     <div className='grid h-[380px] place-content-between rounded-2xl p-[25px] shadow-md md:shadow-lg '>
       <div>
         <h2 className='pb-[5px] text-Green-light xl:text-[24px]'>{review.name}</h2>
-        <p className='overflow-y-auto font-thin italic leading-tight text-Green-700 lg:h-[195px] xl:h-[190px] xl:text-[15px]'>
+        <p className='h-[195px] overflow-y-auto font-thin italic leading-tight text-Green-700 xl:h-[190px] xl:text-[15px]'>
           {review.text}
         </p>
       </div>
