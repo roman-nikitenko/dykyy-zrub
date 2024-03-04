@@ -7,11 +7,13 @@ const Home = () => {
   return (
     <main className=''>
       <Banner />
-      <div className='container-spaces pb-40'>
-        <h1 className='decorationLine my-16'>Про нас</h1>
-        <AboutUs />
-        <ConstructionStages />
-        <Reviews />
+      <div className='flex justify-center'>
+        <div className='container-spaces w-full max-w-[1440px] pb-40'>
+          <h1 className='decorationLine my-16'>Про нас</h1>
+          <AboutUs />
+          <ConstructionStages />
+          <Reviews />
+        </div>
       </div>
     </main>
   );
