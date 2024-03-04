@@ -114,5 +114,5 @@
 }
 
 .max-width-1440 {
-  @apply max-w-[1440px] w-full;
+  @apply w-full max-w-[1440px];
 }

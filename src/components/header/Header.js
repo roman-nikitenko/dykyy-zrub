@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Navigation from '@/components/navigation/Navigation';
 import Logo from '@/components/logo/Logo';
@@ -10,11 +10,13 @@ const Header = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  if (isOpen) {
-    document.body.classList.add('no-scroll');
-  } else {
-    document.body.classList.remove('no-scroll');
-  }
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [isOpen]);
 
   return (
     <header className='relative flex items-center justify-center bg-Green-700'>
