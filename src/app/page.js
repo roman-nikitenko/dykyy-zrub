@@ -7,8 +7,8 @@ const Home = () => {
   return (
     <main className=''>
       <Banner />
-      <div className='container-spaces pb-40'>
-        <h1 className='decorationLine my-16'>Про нас</h1>
+      <div className='container-spaces pb-[100px] lg:pb-[160px]'>
+        <h1 className='decorationLine mb-[30px] mt-[64px] md:my-[64px]'>Про нас</h1>
         <AboutUs />
         <ConstructionStages />
         <Reviews />

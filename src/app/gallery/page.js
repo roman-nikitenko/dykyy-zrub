@@ -3,8 +3,8 @@ import { galleryImages } from '@/data/galleryImages';
 
 const Gallery = () => {
   return (
-    <div className='container-spaces pb-40'>
-      <h1 className='decorationLine my-16'>Галерея</h1>
+    <div className='container-spaces pb-[100px] lg:pb-[160px]'>
+      <h1 className='decorationLine mb-[50px] mt-[64px] md:my-[64px]'>Галерея</h1>
       <MainGallery arrayImages={galleryImages} />
     </div>
   );
