@@ -15,19 +15,20 @@ const MainGallery = ({ arrayImages }) => {
 
   return (
     <div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 '>
-      {arrayImages.map((image) => (
-        <div className='relative h-[300px] rounded-lg' key={image}>
+      {arrayImages.map((image, index) => (
+        <div className='relative h-[300px] rounded-lg' key={index}>
           <Image
             src={image.imageLink}
-            className='rounded-lg'
+            className='rounded-lg object-cover'
             alt='gallery-image'
             fill
-            objectFit='cover'
+            sizes='100%'
             onClick={() => handleImageClick(image.imageLink)}
           />
         </div>
       ))}
       <GalleryModal
+        navigationArrowsShown
         isModalShown={isModalShown}
         activeImage={activeImage}
         imagesSrc={galleryImages}
