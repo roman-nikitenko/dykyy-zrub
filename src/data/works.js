@@ -8,7 +8,8 @@ export const worksList = [
     endBuild: '21.12.2016',
     typeOfBuilding: 'житловий будинок',
     typeOfMaterial: 'дерево',
-    image: '/homesImage/house1.jpeg',
+    mainImage: '/homesImage/house1.jpeg',
+    images: ['/gallery/01 (1).jpg', '/gallery/01 (2).jpg', '/gallery/01 (4).jpg'],
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ export const worksList = [
     endBuild: '21.12.2016',
     typeOfBuilding: 'житловий будинок',
     typeOfMaterial: 'дерево',
-    image: '/homesImage/house2.jpg',
+    mainImage: '/homesImage/house2.jpg',
+    images: ['/gallery/02 (2).jpg', '/gallery/02 (3).jpg', '/gallery/02 (4).jpg'],
   },
   {
     id: 3,
@@ -30,7 +32,8 @@ export const worksList = [
     endBuild: '21.12.2016',
     typeOfBuilding: 'житловий будинок',
     typeOfMaterial: 'дерево',
-    image: '/homesImage/house3.jpg',
+    mainImage: '/homesImage/house3.jpg',
+    images: ['/gallery/03 (2).jpg', '/gallery/03 (3).jpg', '/gallery/03 (4).jpg'],
   },
   {
     id: 4,
@@ -41,7 +44,8 @@ export const worksList = [
     endBuild: '21.12.2016',
     typeOfBuilding: 'житловий будинок',
     typeOfMaterial: 'дерево',
-    image: '/homesImage/house4.jpg',
+    mainImage: '/homesImage/house4.jpg',
+    images: ['/gallery/04 (1).jpg', '/gallery/04 (3).jpg', '/gallery/04 (4).jpg'],
   },
   {
     id: 5,
@@ -52,7 +56,8 @@ export const worksList = [
     endBuild: '21.12.2016',
     typeOfBuilding: 'житловий будинок',
     typeOfMaterial: 'дерево',
-    image: '/homesImage/house5.jpg',
+    mainImage: '/homesImage/house5.jpg',
+    images: ['/gallery/05.jpg', '/gallery/005.jpg'],
   },
   {
     id: 6,
@@ -63,6 +68,7 @@ export const worksList = [
     endBuild: '21.12.2016',
     typeOfBuilding: 'житловий будинок',
     typeOfMaterial: 'дерево',
-    image: '/homesImage/house6.jpg',
+    mainImage: '/homesImage/house6.jpg',
+    images: ['/gallery/06.jpg', '/gallery/06 (1).jpg', '/gallery/006.jpg'],
   },
 ];
