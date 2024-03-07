@@ -27,7 +27,7 @@ const GalleryModal = ({
 
   return (
     <>
-      <div className='fixed inset-0 z-50 flex h-screen w-screen items-center justify-center overflow-y-auto bg-black/15 bg-opacity-60 px-[5px] py-[10px] outline-none backdrop-blur-sm'>
+      <div className='fixed inset-0 z-50 flex h-screen w-screen items-center justify-center overflow-x-auto overflow-y-auto bg-black/15 bg-opacity-60 px-[5px] py-[10px] outline-none backdrop-blur-sm'>
         <div className='relative mx-auto grid w-auto max-w-3xl place-content-center gap-[7px]'>
           <GalleryModalButton
             iconSrc='/icons/close-mark.svg'
@@ -40,14 +40,14 @@ const GalleryModal = ({
               alt='house image'
               width={1000}
               height={1000}
-              className='h-[250px] w-auto rounded-md object-cover object-center sm:h-[350px] md:h-[450px] xl:h-[620px]'
+              className='h-[250px] w-auto rounded-md object-cover object-center sm:h-[350px] md:h-[450px] xl:h-[550px]'
             />
           </div>
           <div className='relative flex items-center justify-self-center'>
             <GalleryModalButton
               iconSrc='/icons/left-arrow.svg'
               handleClick={() => handleScroll(-STEP_WIDTH)}
-              className={`hidden lg:absolute lg:left-[-50px] lg:flex ${navigationArrowsShown && 'flex'}`}
+              className={`hidden ${navigationArrowsShown && 'lg:absolute lg:left-[-50px] lg:flex'}`}
             />
             <div
               ref={containerRef}
@@ -68,7 +68,7 @@ const GalleryModal = ({
             <GalleryModalButton
               iconSrc='/icons/right-arrow.svg'
               handleClick={() => handleScroll(STEP_WIDTH)}
-              className={`hidden lg:absolute lg:right-[-50px] lg:flex ${navigationArrowsShown && 'flex'}`}
+              className={`hidden ${navigationArrowsShown && 'lg:absolute lg:right-[-50px] lg:flex'}`}
             />
           </div>
         </div>
