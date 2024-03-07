@@ -1,63 +1,80 @@
-import React from 'react';
-import { Dialog, IconButton } from '@material-tailwind/react';
+import React, { useRef, useState } from 'react';
 import Image from 'next/image';
+import GalleryModalButton from '@/components/gallery/GalleryModalButton';
+
+const STEP_WIDTH = 200;
 
 const GalleryModal = ({
   navigationInCenter,
+  navigationArrowsShown,
   isModalShown,
   activeImage,
   imagesSrc,
   setActiveImage,
   setIsModalShown,
 }) => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const containerRef = useRef();
+  const handleScroll = (scrollAmount) => {
+    const newScrollPosition = scrollPosition + scrollAmount;
+    setScrollPosition(newScrollPosition);
+    containerRef.current.scrollLeft = newScrollPosition;
+  };
+
+  if (!isModalShown) {
+    return null;
+  }
+
   return (
-    <Dialog
-      animate={{
-        mount: { scale: 1, y: 0 },
-        unmount: { scale: 0.9, y: -100 },
-      }}
-      open={isModalShown}
-      handler={() => setIsModalShown((prev) => !prev)}
-      className=' grid gap-[7px] bg-transparent shadow-none'
-    >
-      <IconButton
-        variant='text'
-        color='white'
-        size='md'
-        onClick={() => setIsModalShown(false)}
-        className='justify-self-end rounded-full'
-      >
-        <Image src='/icons/close-mark.svg' alt='icon' width={75} height={75} />
-      </IconButton>
-      <div className='m-auto grid place-content-center gap-[7px]'>
-        <div className='flex h-auto w-full justify-center'>
-          <Image
-            src={activeImage}
-            alt='house image'
-            sizes='100%'
-            width={1000}
-            height={1000}
-            objectFit='contain'
-            className='xxl:h-[700px] h-[250px] w-auto rounded-md object-cover object-center sm:h-[350px] md:h-[450px] xl:h-[520px]'
+    <>
+      <div className='fixed inset-0 z-50 flex h-screen w-screen items-center justify-center overflow-x-auto overflow-y-auto bg-black/15 bg-opacity-60 px-[5px] py-[10px] outline-none backdrop-blur-sm'>
+        <div className='relative mx-auto grid w-auto max-w-3xl place-content-center gap-[7px]'>
+          <GalleryModalButton
+            iconSrc='/icons/close-mark.svg'
+            handleClick={() => setIsModalShown(false)}
+            className='justify-self-end lg:absolute lg:right-[-50px]'
           />
-        </div>
-        <div
-          className={`flex gap-[5px] overflow-x-auto ${navigationInCenter && 'justify-self-center'}`}
-        >
-          {imagesSrc.map(({ imageLink }, index) => (
+          <div className='flex h-auto w-full justify-center'>
             <Image
-              key={index}
-              src={imageLink}
+              src={activeImage}
               alt='house image'
-              width={75}
-              height={75}
-              onClick={() => setActiveImage(imageLink)}
-              className={`h-[80px] w-[80px] cursor-pointer rounded-md object-cover ${activeImage === imageLink && 'border-[2px] border-Green-300'}`}
+              width={1000}
+              height={1000}
+              className='h-[250px] w-auto rounded-md object-cover object-center sm:h-[350px] md:h-[450px] xl:h-[550px]'
             />
-          ))}
+          </div>
+          <div className='relative flex items-center justify-self-center'>
+            <GalleryModalButton
+              iconSrc='/icons/left-arrow.svg'
+              handleClick={() => handleScroll(-STEP_WIDTH)}
+              className={`hidden ${navigationArrowsShown && 'lg:absolute lg:left-[-50px] lg:flex'}`}
+            />
+            <div
+              ref={containerRef}
+              className={`flex gap-[5px] overflow-x-auto scroll-smooth ${navigationInCenter && 'justify-self-center'}`}
+            >
+              {imagesSrc.map(({ imageLink }, index) => (
+                <Image
+                  key={index}
+                  src={imageLink}
+                  alt='house image'
+                  width={85}
+                  height={85}
+                  onClick={() => setActiveImage(imageLink)}
+                  className={`h-[75px] w-[75px] cursor-pointer rounded-md object-cover transition duration-700 ${activeImage === imageLink && 'border-[2px] border-Green-300'}`}
+                />
+              ))}
+            </div>
+            <GalleryModalButton
+              iconSrc='/icons/right-arrow.svg'
+              handleClick={() => handleScroll(STEP_WIDTH)}
+              className={`hidden ${navigationArrowsShown && 'lg:absolute lg:right-[-50px] lg:flex'}`}
+            />
+          </div>
         </div>
       </div>
-    </Dialog>
+      <div className='fixed inset-0 z-40 h-full w-full bg-black opacity-25'></div>
+    </>
   );
 };
 

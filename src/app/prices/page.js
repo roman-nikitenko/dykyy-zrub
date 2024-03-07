@@ -1,8 +1,8 @@
 const Prices = () => {
   return (
     <div className='flex justify-center 2xl:h-screen'>
-      <div className='container-spaces max-width-1440 pb-40'>
-        <h1 className='decorationLine my-16'>Ціни</h1>
+      <div className='container-spaces max-width-1440 pb-[100px] lg:pb-[160px]'>
+        <h1 className='decorationLine mb-[50px] mt-[64px] md:my-[64px]'>Ціни</h1>
         <div className='flex flex-col gap-4'>
           <p className='text-lg italic'>
             Вартість будівництва будинку зі зрубу коливається від 3700грн за м2 стіни

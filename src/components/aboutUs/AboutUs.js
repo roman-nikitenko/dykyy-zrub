@@ -2,10 +2,10 @@ import Image from 'next/image';
 
 const AboutUs = () => {
   return (
-    <section className='mb-10 flex justify-center gap-[20px] p-[5px] lg:gap-[40px]'>
-      <div className='flex items-center gap-10'>
-        <div className='hidden sm:grid sm:items-center md:gap-[10px] lg:grid-flow-col lg:grid-rows-2 lg:gap-[16px]'>
-          <div className='w-[255px] overflow-hidden rounded-3xl shadow-lg shadow-gray-400 md:hidden lg:row-span-2 lg:block lg:place-content-center'>
+    <section className='mb-[50px] flex justify-center gap-[20px] p-[5px] lg:mb-[70px] lg:gap-[40px]'>
+      <div className='grid items-center gap-10 md:flex'>
+        <div className='grid items-center justify-center gap-[10px] lg:grid-flow-col lg:grid-rows-2 lg:gap-[16px]'>
+          <div className='hidden w-[255px] overflow-hidden rounded-3xl shadow-lg shadow-gray-400 lg:row-span-2 lg:block lg:place-content-center'>
             <Image
               src='/images/house2.jpeg'
               alt='house image'
@@ -23,7 +23,7 @@ const AboutUs = () => {
               className='transition duration-300 hover:scale-[1.1]'
             />
           </div>
-          <div className='w-[300px] overflow-hidden rounded-3xl shadow-lg shadow-gray-400'>
+          <div className='hidden w-[300px] overflow-hidden rounded-3xl shadow-lg shadow-gray-400 md:block'>
             <Image
               src='/images/interior1.jpeg'
               alt='interior image'

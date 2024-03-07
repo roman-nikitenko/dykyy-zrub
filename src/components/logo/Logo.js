@@ -6,7 +6,7 @@ const Logo = () => {
   return (
     <Link href='/'>
       <div className='relative size-10 cursor-pointer'>
-        <Image src='/images/logo2.png' fill alt='logo' />
+        <Image src='/images/logo2.png' fill sizes='100%' alt='logo' />
       </div>
     </Link>
   );

@@ -3,8 +3,8 @@ import Image from 'next/image';
 const HomePage = () => {
   return (
     <div className='flex justify-center'>
-      <div className='container-spaces max-width-1440 pb-40'>
-        <h1 className='decorationLine my-16'>Контакти</h1>
+      <div className='container-spaces max-width-1440 pb-[100px] lg:pb-[160px]'>
+        <h1 className='decorationLine mb-[50px] mt-[64px] md:my-[64px]'>Контакти</h1>
         <div className='mb-10 grid grid-cols-1 justify-center gap-5 md:grid-cols-3 lg:flex xl:justify-between'>
           <div className='block-contacts'>
             <Image src='/icons/market-map.svg' alt='map point icon' width={40} height={40} />
