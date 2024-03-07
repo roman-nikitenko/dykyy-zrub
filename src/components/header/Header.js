@@ -1,8 +1,9 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Navigation from '@/components/navigation/Navigation';
 import Logo from '@/components/logo/Logo';
+import useNoScroll from '@/utils/hooks/useNoScroll';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,13 +11,7 @@ const Header = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-    }
-  }, [isOpen]);
+  useNoScroll(isOpen);
 
   return (
     <header className='relative flex items-center justify-center bg-Green-700'>
@@ -52,14 +47,16 @@ const Header = () => {
             <Image src='/icons/burger-white.svg' fill alt='Burger icon' />
           )}
         </div>
-        <div className='absolute right-0 top-[56px] z-10 w-full overflow-hidden md:w-[200px] md:rounded-bl-lg'>
-          <div
-            id='menu'
-            className={`h-screen bg-Green-700 px-5 py-10 transition-transform duration-500 ${isOpen ? 'translate-x-[0]' : 'translate-x-[100%]'} `}
-          >
-            <Navigation setIsOpen={setIsOpen} hidden={false} />
+        {isOpen && (
+          <div className='absolute right-0 top-[56px] z-10 w-full overflow-hidden bg-white md:w-[200px] md:rounded-bl-lg'>
+            <div
+              id='menu'
+              className={`h-screen bg-Green-700 px-5 py-10 transition-transform duration-500 ${isOpen ? 'translate-x-[0]' : 'translate-x-[100%]'} `}
+            >
+              <Navigation setIsOpen={setIsOpen} hidden={false} />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </header>
   );
