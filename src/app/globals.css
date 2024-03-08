@@ -110,3 +110,7 @@
 .max-width-1440 {
   @apply w-full max-w-[1440px];
 }
+
+.hover-contacts {
+  @apply transition duration-300 hover:scale-[1.2] hover:text-Yellow-500 cursor-pointer;
+}
