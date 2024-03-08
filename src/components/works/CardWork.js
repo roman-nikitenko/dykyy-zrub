@@ -1,9 +1,8 @@
 'use client';
 import Image from 'next/image';
 import classNames from 'classnames';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Carousel } from '@material-tailwind/react';
-import useNoScroll from '@/utils/hooks/useNoScroll';
 
 const CardWork = ({ build }) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
@@ -22,7 +21,13 @@ const CardWork = ({ build }) => {
     return n % 2 === 0;
   };
 
-  useNoScroll(isOpenModal);
+  useEffect(() => {
+    if (isOpenModal) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [isOpenModal]);
 
   const clickHandler = () => {
     setIsOpenModal((prevState) => !prevState);
