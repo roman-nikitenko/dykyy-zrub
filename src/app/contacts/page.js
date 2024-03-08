@@ -16,15 +16,30 @@ const HomePage = () => {
           <div className='block-contacts'>
             <Image src='/icons/envelope-mail.svg' alt='map point icon' width={40} height={40} />
             <h3>Email Address</h3>
-            <p className='text-center text-Green-400'>dykyy-zrub@ukr.net</p>
+            <a
+              href='mailto:dykyy-zrub@ukr.net'
+              className='hover-contacts text-center text-Green-400'
+            >
+              dykyy-zrub@ukr.net
+            </a>
           </div>
 
           <div className='block-contacts'>
             <Image src='/icons/phone-alt.svg' alt='map point icon' width={40} height={40} />
             <h3>Phone</h3>
             <div className='flex flex-col gap-1'>
-              <p className='text-center text-Green-400'>+38 (097) 340 84 34</p>
-              <p className='text-center text-Green-400'>+38 (067) 676 85 07 </p>
+              <a
+                href='tel:+38 (097) 340 84 34'
+                className='hover-contacts text-center text-Green-400'
+              >
+                +38 (097) 340 84 34
+              </a>
+              <a
+                href='tel:+38 (067) 676 85 07'
+                className='hover-contacts text-center text-Green-400'
+              >
+                +38 (067) 676 85 07{' '}
+              </a>
             </div>
           </div>
         </div>

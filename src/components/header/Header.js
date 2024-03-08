@@ -34,7 +34,12 @@ const Header = () => {
             width={28}
             height={28}
           />
-          <p className='navigation_hover text-base text-white lg:text-lg'>+38 (097) 340 84 34</p>
+          <a
+            href='tel:+38 (097) 340 84 34'
+            className='navigation_hover text-base text-white lg:text-lg'
+          >
+            +38 (097) 340 84 34
+          </a>
         </div>
 
         <div
