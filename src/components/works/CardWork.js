@@ -3,7 +3,7 @@ import Image from 'next/image';
 import classNames from 'classnames';
 import { useState } from 'react';
 import { Carousel } from '@material-tailwind/react';
-import useNoScroll from '@/utils/hooks/useNoScroll';
+import useNoScroll from '@/hooks/useNoScroll';
 
 const CardWork = ({ build }) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
