@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --swiper-navigation-color: #31572c;
+  --swiper-navigation-size: 30px !important;
+}
+
 @layer base {
   html {
     @apply scroll-smooth;
@@ -30,12 +35,48 @@
     line-height: 21px;
     letter-spacing: 0;
   }
+  .no-scroll {
+    @apply overflow-y-hidden;
+  }
 }
 
 .small-text {
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 0;
+}
+
+.swiper {
+  margin-right: 0 !important;
+  margin-left: 3px !important;
+  padding: 7px !important;
+}
+
+.swiper-wrapper {
+  min-height: 420px;
+  align-items: center;
+}
+
+.swiper-button-prev {
+  margin-left: -5px;
+}
+
+.swiper-button-next {
+  margin-right: -5px;
+}
+
+.swiper-button-prev::after {
+  height: 30px !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #4f772d;
+}
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+  color: #90a955;
 }
 
 .navigation_hover {
@@ -47,5 +88,29 @@
 }
 
 .decorationLine {
-  @apply relative inline-block before:absolute before:-inset-1 before:top-[-11px] before:block before:w-[150px] before:border-t-[6px] before:border-Green-700;
+  @apply relative inline-block before:absolute before:-inset-1 before:left-[2px] before:top-[-11px] before:block before:w-[150px] before:border-t-[6px] before:border-Green-700;
+}
+
+.input-field {
+  @apply border border-Green-light p-3;
+}
+
+.block-contacts {
+  @apply flex h-52 w-full flex-col items-center gap-5 p-5 shadow-lg shadow-gray-300 transition duration-500 hover:bg-Green-300 hover:shadow-none lg:w-[350px];
+}
+
+.block-advantage {
+  @apply flex cursor-pointer flex-col gap-5 transition-all duration-300 hover:-translate-y-3;
+}
+
+.container-spaces {
+  @apply px-5 lg:px-12 xl:px-16 2xl:px-10;
+}
+
+.max-width-1440 {
+  @apply w-full max-w-[1440px];
+}
+
+.hover-contacts {
+  @apply transition duration-300 hover:scale-[1.2] hover:text-Yellow-500 cursor-pointer;
 }
