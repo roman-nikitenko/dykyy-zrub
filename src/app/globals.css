@@ -112,5 +112,5 @@
 }
 
 .hover-contacts {
-  @apply transition duration-300 hover:scale-[1.2] hover:text-Yellow-500 cursor-pointer;
+  @apply cursor-pointer transition duration-300 hover:scale-[1.2] hover:text-Yellow-500;
 }
