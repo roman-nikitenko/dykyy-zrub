@@ -7,7 +7,7 @@ const ConstructionStages = () => {
       title: 'Project Planning',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore est illum iusto, laboriosam provident quasi quod sed sunt.',
-      imageUrl: '/advatageImages/planning.svg',
+      imageUrl: '/images/advantageImages/planning.svg',
       styles: '',
     },
     {
@@ -15,7 +15,7 @@ const ConstructionStages = () => {
       title: 'Project Management',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore est illum iusto, laboriosam provident quasi quod sed sunt.',
-      imageUrl: '/advatageImages/management.svg',
+      imageUrl: '/images/advantageImages/management.svg',
       styles: 'md:translate-y-[60px]',
     },
     {
@@ -23,7 +23,7 @@ const ConstructionStages = () => {
       title: 'General Contracting',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore est illum iusto, laboriosam provident quasi quod sed sunt.',
-      imageUrl: '/advatageImages/building.svg',
+      imageUrl: '/images/advantageImages/building.svg',
       styles: 'md:translate-y-[120px]',
     },
     {
@@ -31,7 +31,7 @@ const ConstructionStages = () => {
       title: 'Interior Design',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore est illum iusto, laboriosam provident quasi quod sed sunt.',
-      imageUrl: '/advatageImages/design.svg',
+      imageUrl: '/images/advantageImages/design.svg',
       styles: '',
     },
     {
@@ -39,7 +39,7 @@ const ConstructionStages = () => {
       title: 'Exterior Design',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore est illum iusto, laboriosam provident quasi quod sed sunt.',
-      imageUrl: '/advatageImages/design-tool.svg',
+      imageUrl: '/images/advantageImages/design-tool.svg',
       styles: 'md:translate-y-[60px]',
     },
     {
@@ -47,7 +47,7 @@ const ConstructionStages = () => {
       title: 'Space Planning',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deleniti dolore est illum iusto, laboriosam provident quasi quod sed sunt.',
-      imageUrl: '/advatageImages/planning2.svg',
+      imageUrl: '/images/advantageImages/planning2.svg',
       styles: 'md:translate-y-[120px]',
     },
   ];

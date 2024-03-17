@@ -1,6 +1,10 @@
 import CardWork from '@/components/works/CardWork';
 import { worksList } from '@/data/works';
 
+export const metadata = {
+  title: 'Наші роботи',
+};
+
 const Works = () => {
   return (
     <section className='flex justify-center '>

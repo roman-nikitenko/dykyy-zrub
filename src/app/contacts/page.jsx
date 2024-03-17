@@ -1,6 +1,10 @@
 import Image from 'next/image';
 
-const HomePage = () => {
+export const metadata = {
+  title: 'Контакти',
+};
+
+const Contacts = () => {
   return (
     <div className='flex justify-center'>
       <div className='container-spaces max-width-1440 pb-[100px] lg:pb-[160px]'>
@@ -86,4 +90,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Contacts;
