@@ -1,6 +1,10 @@
 import MainGallery from '@/components/gallery/MainGallery';
 import { galleryImages } from '@/data/galleryImages';
 
+export const metadata = {
+  title: 'Галерея',
+};
+
 const Gallery = () => {
   return (
     <section className='flex justify-center'>

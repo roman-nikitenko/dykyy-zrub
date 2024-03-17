@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'Ціни',
+};
+
 const Prices = () => {
   return (
     <div className='flex justify-center 2xl:h-screen'>

@@ -8,13 +8,13 @@ const Navigation = () => {
   const pathname = usePathname();
 
   const linkClassNames = (href) =>
-    classNames('navigation_hover text-base lg:text-lg', {
+    classNames('navigation_hover text-base text-xs text-nowrap lg:text-lg', {
       isActive: pathname === href,
     });
 
   return (
-    <nav className={'hidden lg:block'}>
-      <ul className={'hidden flex-row items-center gap-8 text-white lg:flex lg:gap-12'}>
+    <nav className={'hidden md:block'}>
+      <ul className={'flex items-center gap-8 text-white lg:gap-12'}>
         {NAV_LINKS.map((link) => {
           return (
             <li className={'text-center'} key={link.id}>
