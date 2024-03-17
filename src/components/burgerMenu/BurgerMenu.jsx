@@ -24,22 +24,22 @@ const BurgerMenu = () => {
   return (
     <>
       <div
-        className='relative flex size-7 items-center justify-center lg:hidden'
+        className='relative z-10 flex size-7 h-[30px] w-[30px] items-center justify-center md:hidden'
         onClick={toggleOpenMenu}
       >
         {isMenuOpen ? (
-          <Image src='/icons/cancele2.svg' alt='cancel icon' width={20} height={20} />
+          <Image src='/icons/cancele2.svg' alt='Burger close' width={30} height={30} />
         ) : (
-          <Image src='/icons/burger-white.svg' fill alt='Burger icon' />
+          <Image src='/icons/burger-white.svg' alt='Burger open' width={30} height={30} />
         )}
       </div>
       {isMenuOpen && (
-        <div className='absolute right-0 top-[56px] z-10 w-full overflow-hidden bg-white md:w-[200px] md:rounded-bl-lg'>
+        <div className='absolute right-0 top-[40px] z-10 w-full overflow-hidden bg-white md:w-[200px] md:rounded-bl-lg'>
           <div
             id='menu'
             className={`h-screen bg-Green-700 px-5 py-10 transition-transform duration-500 lg:hidden ${isMenuOpen ? 'translate-x-[0]' : 'translate-x-[100%]'} `}
           >
-            <nav className={`block lg:hidden`}>
+            <nav className={`block md:hidden`}>
               <ul
                 className={`flex flex-col items-center text-white md:gap-10 lg:flex-row lg:gap-12`}
               >
