@@ -3,6 +3,7 @@ import classNames from 'classnames';
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import useNoScroll from '@/hooks/useNoScroll';
 
 const Frame = ({
   children,
@@ -11,6 +12,8 @@ const Frame = ({
   onClose,
   open = true,
 }) => {
+  useNoScroll(open);
+
   useEffect(() => {
     const onKeyPress = (e) => {
       if (closeOnEsc && open && e.key === 'Escape') onClose();
@@ -125,19 +128,6 @@ export const Modal = ({ buttonTitle, title, children }) => {
             </button>
           </form>
         </div>
-
-        {/* <div className="p-4"> */}
-        {/*   <div className="flex flex-col space-y-2"> */}
-        {/*     <input className="text-gray-800 outline-none border-2 border-white focus:border-blue-300 p-1" */}
-        {/*       placeholder="Username" /> */}
-        {/*     <input className="text-gray-800 outline-none border-2 border-white focus:border-blue-300 p-1" */}
-        {/*       placeholder="Password" */}
-        {/*       type="password" /> */}
-        {/*     <button className="text-gray-100 border-2 border-blue-700 bg-blue-600 rounded shadow-xl p-2 outline-none focus:border-blue-300"> */}
-        {/*       Sign in */}
-        {/*     </button> */}
-        {/*   </div> */}
-        {/* </div> */}
         {children}
       </Frame>
     </>
