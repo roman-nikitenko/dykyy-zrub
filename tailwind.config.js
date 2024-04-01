@@ -2,7 +2,7 @@
 import withMT from '@material-tailwind/react/utils/withMT';
 
 module.exports = withMT({
-  content: ['./src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
+  content: ['./src/components/**/*.{js,jsx}', './src/app/**/*.{js,jsx}'],
   theme: {
     extend: {
       colors: {
@@ -15,6 +15,9 @@ module.exports = withMT({
         'Yellow-500': '#FFBA00',
         'Brown-500': '#BB8A52',
       },
+    },
+    screens: {
+      desktop: '1280px',
     },
   },
   plugins: [],

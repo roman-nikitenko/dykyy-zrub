@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useNoScroll = (isOpen: boolean) => {
+const useNoScroll = (isOpen) => {
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add('no-scroll');
