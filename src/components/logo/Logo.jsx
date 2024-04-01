@@ -7,7 +7,11 @@ const Logo = () => {
       <div className='relative size-10 cursor-pointer'>
         <Image src='/images/logo2.png' fill sizes='100%' alt='logo' />
       </div>
-      <span className={'text-nowrap pl-3 text-base font-bold  text-white lg:text-2xl'}>
+      <span
+        className={
+          'text-nowrap pl-3 text-base font-bold text-white lg:hidden lg:text-2xl desktop:block'
+        }
+      >
         Дикий зруб
       </span>
     </Link>

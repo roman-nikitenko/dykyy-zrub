@@ -16,6 +16,9 @@ module.exports = withMT({
         'Brown-500': '#BB8A52',
       },
     },
+    screens: {
+      desktop: '1280px',
+    },
   },
   plugins: [],
 });

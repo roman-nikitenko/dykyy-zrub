@@ -8,7 +8,7 @@ const Navigation = () => {
   const pathname = usePathname();
 
   const linkClassNames = (href) =>
-    classNames('navigation_hover text-base text-xs text-nowrap lg:text-lg', {
+    classNames('navigation_hover text-base text-nowrap', {
       isActive: pathname === href,
     });
 
