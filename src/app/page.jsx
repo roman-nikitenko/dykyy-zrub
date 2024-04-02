@@ -2,7 +2,7 @@ import Banner from '@/components/banner/Banner';
 import AboutUs from '@/components/aboutUs/AboutUs';
 import Reviews from '@/components/reviews/Reviews';
 import ConstructionStages from '@/components/constructionStages/ConstructionStages';
-import AboutTechnology from '@/components/AboutTechnology/AboutTechnology';
+import AboutTechnology from '@/components/aboutTechnology/AboutTechnology';
 
 export const metadata = {
   title: 'Головна | Дикий зруб',
