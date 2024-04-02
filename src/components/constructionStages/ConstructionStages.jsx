@@ -53,19 +53,22 @@ const ConstructionStages = () => {
   ];
   return (
     <>
-      <section className='grid grid-cols-1 gap-5 pb-[70px] md:grid-cols-3 md:pb-[208px]'>
-        {listOfStages.map((stage) => {
-          const { title, imageUrl, description, styles, id } = stage;
-          return (
-            <Stage
-              key={id}
-              styles={styles}
-              description={description}
-              title={title}
-              imageUrl={imageUrl}
-            />
-          );
-        })}
+      <section>
+        <h1 className='decorationLine mb-[30px] mt-[64px] md:my-[64px]'>Стадії виробництва</h1>
+        <div className='grid grid-cols-1 gap-5 pb-[70px] md:grid-cols-3 md:pb-[208px]'>
+          {listOfStages.map((stage) => {
+            const { title, imageUrl, description, styles, id } = stage;
+            return (
+              <Stage
+                key={id}
+                styles={styles}
+                description={description}
+                title={title}
+                imageUrl={imageUrl}
+              />
+            );
+          })}
+        </div>
       </section>
     </>
   );
