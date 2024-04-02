@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import Image from 'next/image';
 import GalleryModalButton from '@/components/gallery/GalleryModalButton';
+import useNoScroll from '@/hooks/useNoScroll';
 
 const STEP_WIDTH = 200;
 
@@ -15,6 +16,9 @@ const GalleryModal = ({
 }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const containerRef = useRef();
+
+  useNoScroll(isModalShown);
+
   const handleScroll = (scrollAmount) => {
     const newScrollPosition = scrollPosition + scrollAmount;
     setScrollPosition(newScrollPosition);
