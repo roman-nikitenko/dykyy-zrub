@@ -1,14 +1,15 @@
 import Image from 'next/image';
+import BannerImage from '@/public/images/banner.jpg';
 
 const Banner = () => {
   return (
-    <section className='relative w-full'>
+    <section className='relative h-[650px] max-h-full w-full'>
       <Image
-        src='/images/banner.jpg'
+        src={BannerImage}
+        placeholder={'blur'}
         alt='banner'
-        height={1000}
-        width={1000}
-        className='h-[450px] w-full object-cover md:h-auto'
+        fill
+        className=' object-cover md:h-auto'
       />
 
       <article className='absolute left-0 top-40 flex flex-col gap-2 p-2 md:left-10 md:top-10 lg:left-20 lg:top-20 xl:left-32 xl:top-32'>
