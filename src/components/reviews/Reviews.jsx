@@ -30,11 +30,11 @@ const BREAKPOINTS = {
 const Reviews = () => {
   const [isModalShown, setIsModalShown] = useState(false);
   const [imagesList, setImagesList] = useState([]);
-  const [activeImage, setActiveImage] = useState('');
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
-  const handleOpenModal = (imageLink, imagesList) => {
+  const handleOpenModal = (index, imagesList) => {
     setIsModalShown(true);
-    setActiveImage(imageLink);
+    setActiveImageIndex(index);
     setImagesList(imagesList);
   };
 
@@ -65,9 +65,9 @@ const Reviews = () => {
       <GalleryModal
         navigationInCenter
         isModalShown={isModalShown}
-        activeImage={activeImage}
+        activeImageIndex={activeImageIndex}
         imagesSrc={imagesList}
-        setActiveImage={setActiveImage}
+        setActiveImageIndex={setActiveImageIndex}
         setIsModalShown={setIsModalShown}
       />
     </section>
