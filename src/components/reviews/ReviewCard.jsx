@@ -10,14 +10,14 @@ const ReviewCard = ({ review, handleOpenModal }) => {
         </p>
       </div>
       <div className='flex place-content-center gap-[5px]'>
-        {review.images.map(({ imageLink }) => (
+        {review.images.map(({ imageLink }, index) => (
           <Image
             key={imageLink}
             src={imageLink}
             alt='house image'
             width={75}
             height={75}
-            onClick={() => handleOpenModal(imageLink, review.images)}
+            onClick={() => handleOpenModal(index, review.images)}
             className='h-[80px] w-[80px] rounded-md object-cover'
           />
         ))}

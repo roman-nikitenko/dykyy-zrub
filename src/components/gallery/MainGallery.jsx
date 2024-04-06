@@ -6,11 +6,11 @@ import { galleryImages } from '@/data/galleryImages';
 
 const MainGallery = ({ arrayImages }) => {
   const [isModalShown, setIsModalShown] = useState(false);
-  const [activeImage, setActiveImage] = useState('');
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
-  const handleImageClick = (image) => {
+  const handleImageClick = (index) => {
     setIsModalShown(true);
-    setActiveImage(image);
+    setActiveImageIndex(index);
   };
 
   return (
@@ -23,16 +23,16 @@ const MainGallery = ({ arrayImages }) => {
             alt='gallery-image'
             fill
             sizes='100%'
-            onClick={() => handleImageClick(image.imageLink)}
+            onClick={() => handleImageClick(index)}
           />
         </div>
       ))}
       <GalleryModal
         navigationArrowsShown
         isModalShown={isModalShown}
-        activeImage={activeImage}
+        activeImageIndex={activeImageIndex}
         imagesSrc={galleryImages}
-        setActiveImage={setActiveImage}
+        setActiveImageIndex={setActiveImageIndex}
         setIsModalShown={setIsModalShown}
       />
     </div>

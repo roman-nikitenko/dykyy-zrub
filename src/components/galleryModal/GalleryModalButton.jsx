@@ -6,7 +6,7 @@ const GalleryModalButton = ({ iconSrc, className, handleClick }) => {
   return (
     <button
       className={classNames(
-        'flex h-[48px] w-[48px] items-center justify-center rounded-full outline-none transition-all hover:bg-white/10 active:bg-white/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none',
+        'flex h-[35px] w-[35px] items-center justify-center rounded-full outline-none transition-all hover:bg-white/10 active:bg-white/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none sm:h-[44px] sm:w-[44px]',
         className && className
       )}
       onClick={handleClick}
