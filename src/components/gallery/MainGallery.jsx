@@ -18,7 +18,7 @@ const MainGallery = () => {
         {galleryImages.map((photo, index) => (
           <div
             key={photo.imageLink + index}
-            onClick={() => handleImageClick(photo.src)}
+            onClick={() => handleImageClick(photo.imageLink)}
             className='mb-2 w-full cursor-pointer transition duration-[500] ease-in hover:scale-[1.02]'
           >
             <img
