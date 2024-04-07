@@ -39,10 +39,12 @@ const CardWork = ({ build }) => {
           onClick={clickHandler}
           className='group h-[200px] w-full cursor-pointer sm:h-[450px] lg:h-[400px] xl:h-[550px] xl:w-full'
         >
-          <img
+          <Image
             className='size-full rounded-3xl object-cover shadow-2xl shadow-black transition duration-700 hover:shadow-lg'
             src={mainImage}
             alt={title}
+            width={1000}
+            height={1000}
           />
         </div>
         <article>
@@ -50,15 +52,15 @@ const CardWork = ({ build }) => {
           <p className='mb-4 text-lg lg:mb-8'>{description}</p>
           <div className='flex flex-col gap-2.5'>
             <div className='flex items-center gap-2'>
-              <h3>Початок будівнитства:</h3>
+              <h3>Початок будівництва:</h3>
               <p className='text-lg'>{startBuild}</p>
             </div>
             <div className='flex items-center gap-2'>
-              <h3>Кінец будівнитства:</h3>
+              <h3>Кінец будівницва:</h3>
               <p className='text-lg'>{endBuild}</p>
             </div>
             <div className='flex items-center gap-2'>
-              <h3>Тип будівнитства:</h3>
+              <h3>Тип будівництва:</h3>
               <p className='text-lg'>{typeOfBuilding}</p>
             </div>
             <div className='flex items-center gap-2'>
@@ -90,8 +92,8 @@ const CardWork = ({ build }) => {
               id='carousel'
               className='h-[300px] max-w-[900px] rounded-xl md:h-[450px] xl:h-[550px]'
             >
-              {images.map((img) => (
-                <img key={img} src={img} alt={title} className='size-full object-cover' />
+              {images.map((img, index) => (
+                <img key={index} src={img} alt={title} className='size-full object-cover' />
               ))}
             </Carousel>
           </div>
