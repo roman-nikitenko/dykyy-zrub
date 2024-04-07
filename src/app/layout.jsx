@@ -23,9 +23,9 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang='uk'>
-      <body className={`${roboto.className}`}>
+      <body className={`${roboto.className} flex min-h-[100vh] flex-col`}>
         <Header />
-        {children}
+        <main className={'flex-auto'}>{children}</main>
         <Footer />
       </body>
     </html>
