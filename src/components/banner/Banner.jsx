@@ -3,7 +3,7 @@ import BannerImage from '@/public/images/banner.jpg';
 
 const Banner = () => {
   return (
-    <section className='relative h-[650px] max-h-full w-full'>
+    <section className='relative h-[710px] max-h-[95vh] w-full'>
       <Image
         src={BannerImage}
         placeholder={'blur'}
