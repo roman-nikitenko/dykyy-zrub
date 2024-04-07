@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import GalleryModal from '@/components/galleryModal/GalleryModal';
 import { galleryImages } from '@/data/galleryImages';
+import Image from 'next/image';
 
 const MainGallery = () => {
   const [isModalShown, setIsModalShown] = useState(false);
@@ -19,12 +20,14 @@ const MainGallery = () => {
           <div
             key={photo.imageLink + index}
             onClick={() => handleImageClick(photo.imageLink)}
-            className='mb-2 w-full cursor-pointer transition duration-[500] ease-in hover:scale-[1.02]'
+            className='relative mb-2 w-full cursor-pointer transition duration-[500] ease-in hover:scale-[1.02]'
           >
-            <img
+            <Image
               src={photo.imageLink}
-              alt={`Gallary emage ${photo.imageLink}`}
+              alt={`Gallery image ${photo.imageLink}`}
               className='max-w-full rounded-md'
+              width={500}
+              height={300}
             />
           </div>
         ))}

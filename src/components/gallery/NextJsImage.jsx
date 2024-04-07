@@ -1,13 +1,11 @@
 import Image from 'next/image';
 
-export default function NextJsImage({
-  photo,
-  imageProps: { alt, title, sizes, className, onClick },
-  wrapperStyle,
-}) {
+const NextJsImage = ({ photo, imageProps, wrapperStyle }) => {
   return (
     <div style={{ ...wrapperStyle, position: 'relative' }}>
-      <Image fill src={photo} {...{ alt, title, sizes, className, onClick }} />
+      <Image alt={imageProps.alt} fill src={photo} {...imageProps} />
     </div>
   );
-}
+};
+
+export default NextJsImage;
