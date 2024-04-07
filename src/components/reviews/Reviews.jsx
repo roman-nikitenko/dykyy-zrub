@@ -40,9 +40,7 @@ const Reviews = () => {
 
   return (
     <section className='m-auto max-w-[1440px]'>
-      <h2 className='decorationLine mb:my-[64px] mb-[30px] text-[30px] font-bold text-Green-700 sm:mb-[20px] lg:mb-[25px] lg:text-[35px] xl:mb-[40px] xl:text-[42px]'>
-        Відгуки наших клієнтів
-      </h2>
+      <h1 className='decorationLine mb-[30px] mt-16'>Відгуки наших клієнтів </h1>
       <div className='flex justify-center'>
         <Swiper
           slidesPerView={1}
@@ -53,7 +51,7 @@ const Reviews = () => {
           pagination={{ clickable: true, dynamicBullets: true }}
           keyboard={{ enabled: true }}
           loop={true}
-          className='w-[380px] sm:w-[640px] md:w-[750px] lg:w-[1000px] xl:w-[1300px]'
+          className='w-full'
         >
           {reviewsList.map((review) => (
             <SwiperSlide key={review.id}>

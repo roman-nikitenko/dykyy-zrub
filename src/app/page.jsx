@@ -10,17 +10,17 @@ export const metadata = {
 
 const Home = () => {
   return (
-    <main>
+    <>
       <Banner />
       <div className='flex justify-center'>
-        <div className='container-spaces w-full max-w-[1440px] pb-[100px] lg:pb-[160px]'>
+        <div className='container-spaces w-full max-w-[1440px]'>
           <AboutTechnology />
           <AboutUs />
           <ConstructionStages />
           <Reviews />
         </div>
       </div>
-    </main>
+    </>
   );
 };
 

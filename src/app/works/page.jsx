@@ -8,7 +8,7 @@ export const metadata = {
 const Works = () => {
   return (
     <section className='flex justify-center '>
-      <div className='container-spaces max-width-1440 pb-[100px] lg:pb-[160px]'>
+      <div className='container-spaces max-width-1440'>
         <h1 className='decorationLine my-12 md:my-[64px]'>Наші роботи</h1>
         <div className='flex flex-col gap-16 lg:gap-32'>
           {worksList.map((build) => (
