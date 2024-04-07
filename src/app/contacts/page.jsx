@@ -81,8 +81,13 @@ const Contacts = () => {
               </button>
             </div>
           </form>
-          <div className='flex h-52 w-full items-center justify-center border border-gray-400 md:h-80 lg:h-[575px]'>
-            <h1>Google map</h1>
+          <div className='flex h-52 w-full  items-center justify-center overflow-hidden rounded-3xl border md:h-80 lg:h-[575px] lg:shadow-xl lg:shadow-gray-300'>
+            <iframe
+              src='https://storage.googleapis.com/maps-solutions-ibfjwe1gin/commutes/ianq/commutes.html'
+              width='100%'
+              height='100%'
+              loading='lazy'
+            ></iframe>
           </div>
         </div>
       </div>
