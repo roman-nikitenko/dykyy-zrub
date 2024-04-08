@@ -1,10 +1,10 @@
 'use client';
-import Image from 'next/image';
 import { useState } from 'react';
 import GalleryModal from '@/components/galleryModal/GalleryModal';
 import { galleryImages } from '@/data/galleryImages';
+import Image from 'next/image';
 
-const MainGallery = ({ arrayImages }) => {
+const MainGallery = () => {
   const [isModalShown, setIsModalShown] = useState(false);
   const [activeImage, setActiveImage] = useState('');
 
@@ -14,19 +14,24 @@ const MainGallery = ({ arrayImages }) => {
   };
 
   return (
-    <div className='grid cursor-pointer grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 '>
-      {arrayImages.map((image, index) => (
-        <div className='relative h-[300px] rounded-lg' key={index}>
-          <Image
-            src={image.imageLink}
-            className='rounded-lg object-cover transition duration-300 hover:scale-[1.03]'
-            alt='gallery-image'
-            fill
-            sizes='100%'
-            onClick={() => handleImageClick(image.imageLink)}
-          />
-        </div>
-      ))}
+    <>
+      <div className='columns-1 gap-x-2 md:columns-2 lg:columns-3 '>
+        {galleryImages.map((photo, index) => (
+          <div
+            key={photo.imageLink + index}
+            onClick={() => handleImageClick(photo.imageLink)}
+            className='relative mb-2 w-full cursor-pointer transition duration-[500] ease-in hover:scale-[1.02]'
+          >
+            <Image
+              src={photo.imageLink}
+              alt={`Gallery image ${photo.imageLink}`}
+              className='max-w-full rounded-md'
+              width={500}
+              height={300}
+            />
+          </div>
+        ))}
+      </div>
       <GalleryModal
         navigationArrowsShown
         isModalShown={isModalShown}
@@ -35,7 +40,7 @@ const MainGallery = ({ arrayImages }) => {
         setActiveImage={setActiveImage}
         setIsModalShown={setIsModalShown}
       />
-    </div>
+    </>
   );
 };
 

@@ -7,19 +7,19 @@ export const metadata = {
 const Contacts = () => {
   return (
     <div className='flex justify-center'>
-      <div className='container-spaces max-width-1440 pb-[100px] lg:pb-[160px]'>
-        <h1 className='decorationLine mb-[50px] mt-[64px] md:my-[64px]'>Контакти</h1>
+      <div className='container-spaces max-width-1440'>
+        <h1 className='decorationLine my-12 md:my-[64px]'>Контакти</h1>
         <div className='mb-10 grid grid-cols-1 justify-center gap-5 md:grid-cols-3 lg:flex xl:justify-between'>
           <div className='block-contacts'>
             <Image src='/icons/market-map.svg' alt='map point icon' width={40} height={40} />
-            <h3>Location</h3>
+            <h3>Локація</h3>
             <p className='text-center text-Green-400'>
-              Україна с. Колочава Закарпатська обл. Межигірський р-н.
+              Україна с. Колочава Закарпатська обл. Межигірський р-н.{' '}
             </p>
           </div>
           <div className='block-contacts'>
             <Image src='/icons/envelope-mail.svg' alt='map point icon' width={40} height={40} />
-            <h3>Email Address</h3>
+            <h3>Email адреса</h3>
             <a
               href='mailto:dykyy-zrub@ukr.net'
               className='hover-contacts text-center text-Green-400'
@@ -30,7 +30,7 @@ const Contacts = () => {
 
           <div className='block-contacts'>
             <Image src='/icons/phone-alt.svg' alt='map point icon' width={40} height={40} />
-            <h3>Phone</h3>
+            <h3>Телефон</h3>
             <div className='flex flex-col gap-1'>
               <a
                 href='tel:+38 (097) 340 84 34'
@@ -48,7 +48,7 @@ const Contacts = () => {
           </div>
         </div>
         <div className='flex-row-reverse xl:flex'>
-          <form className='mb-10 flex flex-col gap-3 lg:px-12 lg:py-20 lg:shadow-xl lg:shadow-gray-300'>
+          <form className='flex flex-col gap-3 py-8 lg:px-12 lg:py-20 lg:shadow-xl lg:shadow-gray-300'>
             <input type='text' placeholder='Name' alt='name field' className='input-field' />
             <div className='flex flex-col gap-3 md:flex-row'>
               <input
@@ -81,8 +81,13 @@ const Contacts = () => {
               </button>
             </div>
           </form>
-          <div className='flex h-52 w-full items-center justify-center border border-gray-400 md:h-80 lg:h-[575px]'>
-            <h1>Google map</h1>
+          <div className='h-[575px] w-full items-center justify-center overflow-hidden rounded-xl border p-2 lg:shadow-xl lg:shadow-gray-300'>
+            <iframe
+              src='https://storage.googleapis.com/maps-solutions-ibfjwe1gin/commutes/ianq/commutes.html'
+              width='100%'
+              height='100%'
+              loading='lazy'
+            ></iframe>
           </div>
         </div>
       </div>
