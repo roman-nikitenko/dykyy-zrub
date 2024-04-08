@@ -1,7 +1,7 @@
 import { Roboto } from 'next/font/google';
 import Footer from '@/components/footer/Footer';
 import Header from '@/components/header/Header';
-import { ToastContainer } from 'react-toastify';
+import { Slide, ToastContainer } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
 import './globals.css';
@@ -29,7 +29,14 @@ const RootLayout = ({ children }) => {
         <Header />
         <main className={'flex-auto'}>{children}</main>
         <Footer />
-        <ToastContainer />
+        <ToastContainer
+          pauseOnHover={false}
+          autoClose={3000}
+          transition={Slide}
+          closeOnClick
+          hideProgressBar
+          position={'bottom-right'}
+        />
       </body>
     </html>
   );
