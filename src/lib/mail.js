@@ -1,7 +1,8 @@
 import nodemailer from 'nodemailer';
+import { generateEmailContent } from '@/app/template/template';
 
-export async function sendMail({ body = '' }) {
-  const { SMTP_EMAIL, SMTP_PASSWORD, EMAIL_HOST, EMAIL_PORT } = process.env;
+export async function sendMail(data) {
+  const { SMTP_EMAIL, SMTP_PASSWORD, EMAIL_HOST, EMAIL_PORT, EMAIL_TO } = process.env;
 
   const transport = nodemailer.createTransport({
     host: EMAIL_HOST,
@@ -18,14 +19,13 @@ export async function sendMail({ body = '' }) {
   }
 
   try {
-    const sendResult = await transport.sendMail({
+    await transport.sendMail({
       from: SMTP_EMAIL,
       /* TODO: replace on dynamic values */
-      to: 'dykyy-zrub@ukr.net',
-      subject: 'EMAIL FROM SITE',
-      html: body,
+      to: EMAIL_TO,
+      subject: `Повідомлення від ${data?.name}`,
+      ...generateEmailContent(data),
     });
-    console.log('@Sended email>>>', sendResult);
   } catch (error) {
     console.log('@@@Error on send', error);
   }

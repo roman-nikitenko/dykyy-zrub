@@ -131,7 +131,7 @@ export const Modal = ({ buttonTitle, title, children }) => {
                 type='email'
                 id='email'
                 {...register('email', { required: true })}
-                className=' form-control block w-full rounded-md border border-gray-300 px-3 py-2 text-black focus:outline-none focus:ring-1 focus:ring-indigo-500'
+                className='form-control block w-full rounded-md border border-gray-300 px-3 py-2 text-black focus:outline-none focus:ring-1 focus:ring-indigo-500'
                 placeholder='myemail@example.com'
               />
             </div>

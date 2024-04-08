@@ -5,9 +5,7 @@ export async function POST(req) {
   try {
     const data = await req.json();
 
-    await sendMail({
-      body: JSON.stringify(data.message),
-    });
+    await sendMail(data);
 
     return NextResponse.json({ message: 'OK' });
   } catch (error) {
