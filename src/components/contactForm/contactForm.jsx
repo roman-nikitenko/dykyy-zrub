@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import { useState } from 'react';
 import classNames from 'classnames';
 
-const ContactForm = ({ labelColor, onSubmitSuccess, title = 'Test Title' }) => {
+const ContactForm = ({ labelColor, onSubmitSuccess, title }) => {
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(false);
   const { register, reset, handleSubmit } = useForm();
 
