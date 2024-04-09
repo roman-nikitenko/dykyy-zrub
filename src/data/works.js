@@ -2,14 +2,13 @@ export const worksList = [
   {
     id: 1,
     title: 'Будинок 1',
-    description:
-      'Бажаєте зберегти нерви та дорогоцінний час? Наша компанія виконає всі види будівельних робіт, починаючи від проекту',
+    description: 'Двоповерховий будинок з мансардою та ганком',
     startBuild: '21.02.2022',
     endBuild: '07.07.2023',
-    typeOfBuilding: 'житловий будинок',
+    square: '140м2',
     typeOfMaterial: 'Закарпатський зруб',
     mainImage: '/images/homesImage/house1.jpeg',
-    images: [
+    imagesList: [
       '/images/gallery/01 (1).jpg',
       '/images/gallery/01 (2).jpg',
       '/images/gallery/01 (4).jpg',
@@ -17,15 +16,14 @@ export const worksList = [
   },
   {
     id: 2,
-    title: 'Будинок 2',
-    description:
-      'Бажаєте зберегти нерви та дорогоцінний час? Наша компанія виконає всі види будівельних робіт, починаючи від проекту',
+    title: 'Сауна 1',
+    description: 'Простора сауна із закарпатського зрубу',
     startBuild: '21.02.2022',
     endBuild: '07.07.2023',
-    typeOfBuilding: 'житловий будинок',
+    square: '22м',
     typeOfMaterial: 'Закарпатський зруб',
     mainImage: '/images/homesImage/house2.jpg',
-    images: [
+    imagesList: [
       '/images/gallery/02 (2).jpg',
       '/images/gallery/02 (3).jpg',
       '/images/gallery/02 (4).jpg',
@@ -33,58 +31,57 @@ export const worksList = [
   },
   {
     id: 3,
-    title: 'Будинок 3',
-    description:
-      'Бажаєте зберегти нерви та дорогоцінний час? Наша компанія виконає всі види будівельних робіт, починаючи від проекту',
+    title: 'Будинок 2',
+    description: 'Двоповерховий будинок із мансардою та ганком',
     startBuild: '21.02.2022',
     endBuild: '07.07.2023',
-    typeOfBuilding: 'житловий будинок',
+    square: '121м2',
     typeOfMaterial: 'Закарпатський зруб',
     mainImage: '/images/homesImage/house3.jpg',
-    images: [
+    imagesList: [
       '/images/gallery/03 (2).jpg',
       '/images/gallery/03 (3).jpg',
       '/images/gallery/03 (4).jpg',
     ],
   },
-  {
-    id: 4,
-    title: 'Будинок 4',
-    description:
-      'Бажаєте зберегти нерви та дорогоцінний час? Наша компанія виконає всі види будівельних робіт, починаючи від проекту',
-    startBuild: '21.02.2022',
-    endBuild: '07.07.2023',
-    typeOfBuilding: 'житловий будинок',
-    typeOfMaterial: 'Закарпатський зруб',
-    mainImage: '/images/homesImage/house4.jpg',
-    images: [
-      '/images/gallery/04 (1).jpg',
-      '/images/gallery/04 (3).jpg',
-      '/images/gallery/04 (4).jpg',
-    ],
-  },
+  /* Temporary disabled block */
+  // {
+  //   id: 4,
+  //   title: 'Будинок 4',
+  //   description:
+  //     'Бажаєте зберегти нерви та дорогоцінний час? Наша компанія виконає всі види будівельних робіт, починаючи від проекту',
+  //   startBuild: '21.02.2022',
+  //   endBuild: '07.07.2023',
+  //   square: 'Житловий будинок',
+  //   typeOfMaterial: 'Закарпатський зруб',
+  //   mainImage: '/images/homesImage/house4.jpg',
+  //   imagesList: [
+  //     '/images/gallery/04 (1).jpg',
+  //     '/images/gallery/04 (3).jpg',
+  //     '/images/gallery/04 (4).jpg',
+  //   ],
+  // },
   {
     id: 5,
-    title: 'Будинок 5',
+    title: 'Будинок 3',
     description:
       'Бажаєте зберегти нерви та дорогоцінний час? Наша компанія виконає всі види будівельних робіт, починаючи від проекту',
     startBuild: '21.02.2022',
     endBuild: '07.07.2023',
-    typeOfBuilding: 'житловий будинок',
+    square: 'Житловий будинок',
     typeOfMaterial: 'Закарпатський зруб',
     mainImage: '/images/homesImage/house5.jpg',
-    images: ['/images/gallery/05.jpg', '/images/gallery/005.jpg'],
+    imagesList: ['/images/gallery/05.jpg', '/images/gallery/005.jpg'],
   },
   {
     id: 6,
-    title: 'Будинок 6',
-    description:
-      'Бажаєте зберегти нерви та дорогоцінний час? Наша компанія виконає всі види будівельних робіт, починаючи від проекту',
+    title: 'Будинок 4',
+    description: 'Двоповерховий будинок із закарпатського зрубу',
     startBuild: '21.02.2022',
     endBuild: '07.07.2023',
-    typeOfBuilding: 'житловий будинок',
+    square: '102м',
     typeOfMaterial: 'Закарпатський зруб',
     mainImage: '/images/homesImage/house6.jpg',
-    images: ['/images/gallery/06.jpg', '/images/gallery/06 (1).jpg', '/images/gallery/006.jpg'],
+    imagesList: ['/images/gallery/06.jpg', '/images/gallery/06 (1).jpg', '/images/gallery/006.jpg'],
   },
 ];

@@ -6,13 +6,13 @@ import { Modal } from '@/components/modal/Modal';
 
 const Header = () => {
   return (
-    <header className='relative flex items-center justify-center bg-Green-700'>
+    <header className='relative flex items-center justify-center bg-Green-700 py-2'>
       <div className='container-spaces flex w-full max-w-[1440px] items-center justify-between'>
         <Logo />
         <div className='flex items-center overflow-hidden md:gap-7 lg:gap-5'>
           <Navigation />
         </div>
-        <div className={'flex gap-4 py-2'}>
+        <div className={'flex gap-4'}>
           <a
             href='tel:+38 (097) 340 84 34'
             className={'flex flex-initial justify-between gap-2 text-base'}
