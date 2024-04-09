@@ -34,7 +34,7 @@ const BurgerMenu = () => {
         )}
       </div>
       {isMenuOpen && (
-        <div className='absolute right-0 top-[40px] z-10 w-full overflow-hidden bg-white md:w-[200px] md:rounded-bl-lg'>
+        <div className='absolute right-0 top-[48px] z-10 w-full overflow-hidden bg-white md:w-[200px] md:rounded-bl-lg'>
           <div
             id='menu'
             className={`h-screen bg-Green-700 px-5 py-10 transition-transform duration-500 md:hidden ${isMenuOpen ? 'translate-x-[0]' : 'translate-x-[100%]'} `}
