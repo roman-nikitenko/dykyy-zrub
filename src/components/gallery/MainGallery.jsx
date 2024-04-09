@@ -40,17 +40,17 @@ const MainGallery = () => {
 
   return (
     <>
-      <div className='columns-1 gap-x-2 md:columns-2 lg:columns-3 '>
+      <div className='columns-1 gap-x-2 md:columns-2 lg:columns-3'>
         {galleryImages.map((photo, index) => (
           <div
             key={photo.src + index}
             onClick={() => handleSelectClick(photo.src)}
-            className='relative mb-2 w-full cursor-pointer transition duration-[500] ease-in hover:scale-[1.02]'
+            className='relative mb-2'
           >
             <Image
               src={photo.src}
               alt={`Gallery image ${photo.src}`}
-              className='max-w-full rounded-md'
+              className='m-auto max-w-full cursor-pointer rounded-md'
               width={500}
               height={300}
             />

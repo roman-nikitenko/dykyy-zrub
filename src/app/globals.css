@@ -109,7 +109,7 @@
 }
 
 .container-spaces {
-  @apply px-5 lg:px-12 xl:px-16 2xl:px-10;
+  @apply px-3 lg:px-12 xl:px-16 2xl:px-10;
 }
 
 .max-width-1440 {
