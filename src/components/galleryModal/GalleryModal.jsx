@@ -22,18 +22,27 @@ const GalleryModal = ({
   useNoScroll(isModalShown);
 
   const handleScroll = (scrollAmount) => {
+    const rect = containerRef.current?.getBoundingClientRect();
+    const rectWidth = rect.width;
+    const scrollWidth = containerRef.current?.scrollWidth;
+    const maxScroll = scrollWidth - rectWidth;
     const newScrollPosition = scrollPosition + scrollAmount;
-    setScrollPosition(newScrollPosition);
-    containerRef.current.scrollLeft = newScrollPosition;
+
+    if (newScrollPosition >= maxScroll) {
+      setScrollPosition(maxScroll);
+      containerRef.current.scrollLeft = maxScroll;
+    } else if (newScrollPosition < 0) {
+      setScrollPosition(0);
+      containerRef.current.scrollLeft = 0;
+    } else {
+      setScrollPosition(newScrollPosition);
+      containerRef.current.scrollLeft = newScrollPosition;
+    }
   };
 
   if (!isModalShown) {
     return null;
   }
-
-  const closeButtonClassNames = classNames(
-    'absolute top-0 right-2 sm:-top-12 sm:right-12 w-12 h-12 hover:border-gray-600'
-  );
 
   const handlePrevImage = () => {
     handleChangeSlide('prev');
@@ -42,10 +51,15 @@ const GalleryModal = ({
     handleChangeSlide('next');
   };
 
+  const closeButtonClassNames = classNames(
+    'absolute top-0 right-2 sm:-top-12 sm:right-12 w-12 h-12 hover:border-gray-600'
+  );
+  const arrowClassNames = `absolute right-0 top-1/2 h-8 w-8 bg-gray-400 bg-opacity-50 md:h-12 md:w-12 -translate-y-1/2`;
+
   return (
     <>
       <div className='fixed inset-0 flex h-screen w-screen items-center justify-center overflow-x-auto overflow-y-auto bg-black/15 bg-opacity-60 px-[5px] py-[10px] outline-none backdrop-blur-sm'>
-        <div className='relative mx-auto flex h-full w-full flex-col place-content-center gap-[7px] overflow-hidden px-0 md:px-8'>
+        <div className='relative mx-auto flex h-full w-full flex-col place-content-center gap-[7px] overflow-hidden px-0 md:px-1 lg:px-4'>
           <div className='relative flex h-full max-h-[80vh] w-full grow justify-center'>
             <Image
               src={activeImage}
@@ -61,12 +75,12 @@ const GalleryModal = ({
             <GalleryModalButton
               iconSrc='/icons/left-arrow.svg'
               handleClick={handlePrevImage}
-              className={`absolute left-0 top-1/2 h-12 w-12 bg-gray-400 bg-opacity-50 md:h-16 md:w-16`}
+              className={`${arrowClassNames} left-0`}
             />
             <GalleryModalButton
               iconSrc='/icons/right-arrow.svg'
               handleClick={handleNextImage}
-              className={`absolute right-0 top-1/2 h-12 w-12 bg-gray-400 bg-opacity-50 md:h-16 md:w-16`}
+              className={`${arrowClassNames} right-0`}
             />
           </div>
           <div className='relative flex items-center self-center justify-self-center sm:max-w-[80vw]'>
