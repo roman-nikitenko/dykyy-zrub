@@ -8,9 +8,34 @@ const MainGallery = () => {
   const [isModalShown, setIsModalShown] = useState(false);
   const [activeImage, setActiveImage] = useState('');
 
-  const handleImageClick = (image) => {
+  const handleSelectClick = (image) => {
     setIsModalShown(true);
     setActiveImage(image);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalShown(false);
+  };
+
+  const handleChangeSlide = (type = 'next') => {
+    const currentSlideIndex = galleryImages.findIndex((img) => img.src === activeImage);
+    if (type === 'next') {
+      if (currentSlideIndex !== galleryImages.length - 1) {
+        const imageSrc = galleryImages[currentSlideIndex + 1].src;
+        setActiveImage(imageSrc);
+      } else {
+        setActiveImage(galleryImages[0].src);
+      }
+    }
+
+    if (type === 'prev') {
+      if (currentSlideIndex <= 0) {
+        setActiveImage(galleryImages[galleryImages.length - 1].src);
+      } else {
+        const imageSrc = galleryImages[currentSlideIndex - 1].src;
+        setActiveImage(imageSrc);
+      }
+    }
   };
 
   return (
@@ -18,13 +43,13 @@ const MainGallery = () => {
       <div className='columns-1 gap-x-2 md:columns-2 lg:columns-3 '>
         {galleryImages.map((photo, index) => (
           <div
-            key={photo.imageLink + index}
-            onClick={() => handleImageClick(photo.imageLink)}
+            key={photo.src + index}
+            onClick={() => handleSelectClick(photo.src)}
             className='relative mb-2 w-full cursor-pointer transition duration-[500] ease-in hover:scale-[1.02]'
           >
             <Image
-              src={photo.imageLink}
-              alt={`Gallery image ${photo.imageLink}`}
+              src={photo.src}
+              alt={`Gallery image ${photo.src}`}
               className='max-w-full rounded-md'
               width={500}
               height={300}
@@ -38,7 +63,8 @@ const MainGallery = () => {
         activeImage={activeImage}
         imagesSrc={galleryImages}
         setActiveImage={setActiveImage}
-        setIsModalShown={setIsModalShown}
+        handleClose={handleCloseModal}
+        handleChangeSlide={handleChangeSlide}
       />
     </>
   );
