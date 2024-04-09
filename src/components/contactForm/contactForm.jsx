@@ -4,8 +4,9 @@ import { useForm } from 'react-hook-form';
 import { sendEmail } from '@/lib/utils/sendEmail';
 import { toast } from 'react-toastify';
 import { useState } from 'react';
+import classNames from 'classnames';
 
-const ContactForm = ({ onSubmitSuccess, title = 'Test Title' }) => {
+const ContactForm = ({ labelColor, onSubmitSuccess, title = 'Test Title' }) => {
   const [isSubmitDisabled, setIsSubmitDisabled] = useState(false);
   const { register, reset, handleSubmit } = useForm();
 
@@ -26,12 +27,17 @@ const ContactForm = ({ onSubmitSuccess, title = 'Test Title' }) => {
     }
   };
 
+  const labelClassNames = classNames(
+    'block text-sm font-medium m-2',
+    `text-${labelColor || 'black'}`
+  );
+
   return (
     <div className='h-full w-full rounded-lg p-4 shadow-md'>
-      <h1 className='text-lg'>{title}</h1>
+      <h1 className='text-center text-xl sm:text-3xl'>{title}</h1>
       <form className={'align-center mx-auto flex flex-col'} onSubmit={handleSubmit(onSubmit)}>
         <div className='mb-4'>
-          <label htmlFor='name' className='block text-sm font-medium text-yellow-50'>
+          <label htmlFor='name' className={labelClassNames}>
             Ваше імя
           </label>
           <input
@@ -43,7 +49,7 @@ const ContactForm = ({ onSubmitSuccess, title = 'Test Title' }) => {
           />
         </div>
         <div className='mb-4'>
-          <label htmlFor='phone' className='block text-sm font-medium text-yellow-50'>
+          <label htmlFor='phone' className={labelClassNames}>
             Телефон
           </label>
           <input
@@ -55,7 +61,7 @@ const ContactForm = ({ onSubmitSuccess, title = 'Test Title' }) => {
           />
         </div>
         <div className='mb-4'>
-          <label htmlFor='email' className='block text-sm font-medium text-yellow-50'>
+          <label htmlFor='email' className={labelClassNames}>
             Ваш Email
           </label>
           <input
@@ -67,7 +73,7 @@ const ContactForm = ({ onSubmitSuccess, title = 'Test Title' }) => {
           />
         </div>
         <div className='mb-4'>
-          <label htmlFor='message' className='block text-sm font-medium text-yellow-50'>
+          <label htmlFor='message' className={labelClassNames}>
             Питання
           </label>
           <textarea

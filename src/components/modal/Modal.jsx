@@ -75,7 +75,7 @@ export const Modal = ({ buttonTitle, children }) => {
           setOpen(false);
         }}
       >
-        <ContactForm onSubmitSuccess={() => setOpen(false)} />
+        <ContactForm onSubmitSuccess={() => setOpen(false)} labelColor={'white'} />
         {children}
       </Frame>
     </>

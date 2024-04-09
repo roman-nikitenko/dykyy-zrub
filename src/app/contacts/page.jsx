@@ -41,11 +41,11 @@ const Contacts = () => {
         </div>
       </div>
       <div className='w-full flex-row-reverse xl:flex'>
-        <div className={'flex h-full w-[400px] shrink-0 grow self-stretch'}>
+        <div className={'flex h-full w-full shrink-0 grow self-stretch md:basis-1/3'}>
           <ContactForm title={'Напишіть нам'} />
         </div>
 
-        <div className='h-[575px] basis-full items-center justify-center overflow-hidden rounded-xl border p-2 lg:shadow-xl lg:shadow-gray-300'>
+        <div className='h-[575px] items-center justify-center overflow-hidden rounded-xl border p-2 shadow-xl shadow-gray-300 md:basis-2/3'>
           <iframe
             src='https://storage.googleapis.com/maps-solutions-ibfjwe1gin/commutes/ianq/commutes.html'
             width='100%'
