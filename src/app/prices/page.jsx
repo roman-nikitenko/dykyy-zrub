@@ -41,7 +41,7 @@ const Prices = () => {
           <tbody className='divide-y divide-gray-200 bg-white'>
             <tr className='hover:bg-gray-100'>
               <td className='whitespace-pre-wrap px-6 py-4 text-sm font-medium text-gray-900'>
-                <h4 className='mb-1'>Криша</h4>
+                <h4 className='mb-1'>Дах</h4>
               </td>
               <td className='whitespace-pre-wrap px-6 py-4 text-sm font-medium text-gray-900'>
                 <ul className='ml-4 list-disc'>

@@ -1,8 +1,11 @@
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
 export const metadata = {
   title: 'Контакти',
 };
+
+const ContactForm = dynamic(() => import('@/components/contactForm/contactForm'), { ssr: false });
 
 const Contacts = () => {
   return (
@@ -37,41 +40,12 @@ const Contacts = () => {
           </div>
         </div>
       </div>
-      <div className='flex-row-reverse xl:flex'>
-        <form className='flex flex-col gap-3 py-8 lg:px-12 lg:py-20 lg:shadow-xl lg:shadow-gray-300'>
-          <input type='text' placeholder='Name' alt='name field' className='input-field' />
-          <div className='flex flex-col gap-3 md:flex-row'>
-            <input
-              type='text'
-              placeholder='Your Email'
-              alt='email field'
-              className='input-field flex-1'
-            />
-            <input
-              type='text'
-              placeholder='Your Phone'
-              alt='phone field'
-              className='input-field flex-1'
-            />
-          </div>
-          <input
-            type='text'
-            placeholder='Your Subject'
-            alt='subject field'
-            className='input-field'
-          />
-          <textarea className='input-field h-44' placeholder='Your Message' />
+      <div className='w-full flex-row-reverse xl:flex'>
+        <div className={'flex h-full w-[400px] shrink-0 grow self-stretch'}>
+          <ContactForm title={'Напишіть нам'} />
+        </div>
 
-          <div>
-            <button
-              type='submit'
-              className='cursor-pointer rounded-lg bg-Green-700 px-5 py-2 text-white transition hover:text-Yellow-500'
-            >
-              Submit
-            </button>
-          </div>
-        </form>
-        <div className='h-[575px] w-full items-center justify-center overflow-hidden rounded-xl border p-2 lg:shadow-xl lg:shadow-gray-300'>
+        <div className='h-[575px] basis-full items-center justify-center overflow-hidden rounded-xl border p-2 lg:shadow-xl lg:shadow-gray-300'>
           <iframe
             src='https://storage.googleapis.com/maps-solutions-ibfjwe1gin/commutes/ianq/commutes.html'
             width='100%'
