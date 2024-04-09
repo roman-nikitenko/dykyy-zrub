@@ -24,7 +24,7 @@ const BurgerMenu = () => {
   return (
     <>
       <div
-        className='relative z-10 flex size-7 h-[30px] w-[30px] items-center justify-center md:hidden'
+        className='relative flex size-7 h-[30px] w-[30px] items-center justify-center md:hidden'
         onClick={toggleOpenMenu}
       >
         {isMenuOpen ? (
