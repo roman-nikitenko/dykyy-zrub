@@ -12,10 +12,10 @@ const CardWork = ({ build }) => {
     description,
     startBuild,
     endBuild,
-    typeOfBuilding,
+    square,
     typeOfMaterial,
     mainImage,
-    images,
+    imagesList,
     id,
   } = build;
   const isEven = (n) => {
@@ -60,8 +60,8 @@ const CardWork = ({ build }) => {
               <p className='text-lg'>{endBuild}</p>
             </div>
             <div className='flex items-center gap-2'>
-              <h3>Тип будівництва:</h3>
-              <p className='text-lg'>{typeOfBuilding}</p>
+              <h3>Площа:</h3>
+              <p className='text-lg'>{square}</p>
             </div>
             <div className='flex items-center gap-2'>
               <h3>Тип матеріалу:</h3>
@@ -78,21 +78,15 @@ const CardWork = ({ build }) => {
           <div className='relative'>
             <button
               onClick={clickHandler}
-              className='absolute -top-12 right-0 rounded-full p-2  transition duration-300 hover:bg-white hover:bg-opacity-15'
+              className='absolute -top-12 right-0 size-5 rounded-full p-2  transition duration-300 hover:bg-white hover:bg-opacity-15'
             >
-              <Image
-                src='/icons/cancele2.svg'
-                alt='close icon'
-                width={1000}
-                height={1000}
-                className='size-5'
-              />
+              <Image src='/icons/cancele2.svg' alt='close icon' fill />
             </button>
             <Carousel
               id='carousel'
               className='h-[300px] max-w-[900px] rounded-xl md:h-[450px] xl:h-[550px]'
             >
-              {images.map((img, index) => (
+              {imagesList.map((img, index) => (
                 <img key={index} src={img} alt={title} className='size-full object-cover' />
               ))}
             </Carousel>
